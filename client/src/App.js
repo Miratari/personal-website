@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+
+function BGTile() {
+  return (
+    <div>
+      tile placeholder
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="background">
+      <div className="info-card">
+        <h1>Koa Lee</h1>
+        <sub>Software Engineer</sub>
+        <sub>Web Developer</sub>
+        <sub>Creative</sub>
+      </div>
+
+      <div className="info-card">
+        <h2>Overview</h2>
+
+      </div>
+
+      <div className="info-card">
+        <h2>Overview</h2>
+
+      </div>
+
     </div>
   );
 }
