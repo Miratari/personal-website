@@ -1,52 +1,54 @@
 html {
-  text-align: center;
-  background-color: #d7d7d7;
-  font-family: 'Helvetica' 'Arial' 'sans-serif'
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: 'Helvetica' 'Arial' 'sans-serif';
+}
+
+* {
+  border-style: dotted;
+  border-color: black;
+  border-width: 0px;
 }
 
 h1 {
   font-weight:bold;
-  font-size: 10vw;
-  border-style:dotted;
-  border-color:rgb(225, 225, 225);
+  font-size: 150px;
   margin:0px;
 }
 
 h2 {
   font-weight:bold;
-  font-size: 3vw;
-  border-style:dotted;
-  border-color:rgb(225, 225, 225);
+  font-size: 50px;
   margin:0px;
 }
 
 sub {
-  border-style:dotted;
-  border-color:rgb(225, 225, 225);
   display:block;
-  font-size:3vw;
+  font-size: 40px;
+  padding-bottom: 10px;
 }
 
 #background {
   text-align: center;
-}
-
-.fullscreen-page {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
   justify-content: center; /* horizontal alignment */
   align-items: center; /* vertical alignment */
+  display: grid;
+  grid-row:auto;
+  min-height: 100vh;
 }
 
 .info-card {
   display:block;
   margin: 40px;
+  width: min(1500px, 80vw);
   padding: 40px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   justify-content:left;
   text-align:left;
-  box-shadow: 0px 0px 15px rgb(255, 255, 255)
+  box-shadow: 0px 0px 0px rgb(255, 255, 255);
+  border-bottom-style: solid;
+  border-color: black;
+  border-bottom-width: 5px;
 }
 
 @keyframes App-logo-spin {
