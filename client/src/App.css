@@ -10,53 +10,62 @@ html {
   border-width: 0px;
 }
 
-h1 {
-  font-weight:bold;
-  font-size: 150px;
-  margin:0px;
-  padding-top: 5vh;
+body {
+  justify-content: center;
+  display:grid;
 }
 
-h2 {
-  font-weight:bold;
-  font-size: 50px;
-  margin:0px;
-}
-
-sub {
-  display:block;
-  font-size: 40px;
-  padding-bottom: 10px;
-}
-
-#background {
+#page {
   text-align: center;
   justify-content: center; /* horizontal alignment */
   align-items: center; /* vertical alignment */
   display: grid;
   grid-row:auto;
-  min-height: 100vh;
+  max-width: 99vw;
+  min-width: 70vw;
+  min-height: 90vh;
 }
 
-.info-card {
+.header {
+  display:flex;
+  flex-direction:column;
+  background-color:#BA160C;
+  color:white;
+  border-radius: 20px;
+  text-align:start;
+}
+
+.header h1 {
+  font-weight:bold;
+  font-size: 120px;
+  padding:30px;
+  margin:0px;
+  max-width: 99vw;
+  min-width: 70vw;
+  /* 
+  flex-grow: what percentage of the other objects' size this one should be at MAX. 
+  flex-shrink: what percentage idk
+  flex-basis: sets the initial main size.
+  */
+}
+
+.header .dividing-line {
+  border-color:white;
+  border-width:3px;
+  border-style:solid;
+  flex:0 0 auto;
+}
+
+.header .list {
+  text-align: end;
+  padding: 30px;
+  margin: 0px;
+}
+
+.header sub {
   display:block;
-  margin: 40px;
-  width: min(1500px, 80vw);
-  padding: 40px;
-  background-color: rgb(255, 255, 255);
-  justify-content:left;
-  text-align:left;
-  box-shadow: 0px 0px 0px rgb(255, 255, 255);
-  /* border-bottom-style: solid;
-  border-color: black;
-  border-bottom-width: 5px; */
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-wrap: nowrap;
 }
