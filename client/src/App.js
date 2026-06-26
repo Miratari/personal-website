@@ -21,6 +21,18 @@ function App() {
           <sub>Creative</sub>
         </div>
       </header>
+
+      <section>
+        <header>section header</header>
+        new section I think
+      </section>
+      
+      <section>
+        <header>
+          section header 2
+        </header>
+        another section
+      </section>
     </div>
   );
 }

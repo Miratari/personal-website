@@ -5,6 +5,7 @@ html {
 }
 
 * {
+  box-sizing: border-box;
   border-style: dotted;
   border-color: black;
   border-width: 0px;
@@ -12,7 +13,7 @@ html {
 
 body {
   justify-content: center;
-  display:grid;
+  display: grid;
 }
 
 #page {
@@ -20,26 +21,28 @@ body {
   justify-content: center; /* horizontal alignment */
   align-items: center; /* vertical alignment */
   display: grid;
-  grid-row:auto;
+  grid-row: auto;
   max-width: 99vw;
   min-width: 70vw;
   min-height: 90vh;
 }
 
 .header {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   background-color:#BA160C;
-  color:white;
-  border-radius: 20px;
-  text-align:start;
+  color: white;
+  border-radius: 1.5rem;
+  text-align: start;
 }
 
 .header h1 {
-  font-weight:bold;
-  font-size: 120px;
-  padding:30px;
-  margin:0px;
+  font-weight: bold;
+  font-size: 7rem;
+  padding: 1.8rem;
+  padding-bottom: 0.7rem;
+  /* padding-right: 5rem; */
+  margin: 0px;
   max-width: 99vw;
   min-width: 70vw;
   /* 
@@ -50,22 +53,26 @@ body {
 }
 
 .header .dividing-line {
-  border-color:white;
-  border-width:3px;
-  border-style:solid;
-  flex:0 0 auto;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  flex: 0 0 auto;
 }
 
 .header .list {
   text-align: end;
-  padding: 30px;
+  padding: 1.8rem;
   margin: 0px;
 }
 
 .header sub {
-  display:block;
-  font-size: 30px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  display: block;
+  font-size: 2rem;
+  /* margin-top: 5px; */
   text-wrap: nowrap;
+}
+
+section {
+  border-width: 2px;
+  border-style: solid;
 }
