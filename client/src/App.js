@@ -1,10 +1,23 @@
 // import logo from './logo.svg';
+import github from './github.svg';
 import './App.css';
 
-function ProjectCard({ title, brief, description, tags }) {
+function Contact({ icon, text, subtext, href }) {
   return (
-    <div className="project-card">
-      {title}
+    <div className="contact">
+      <svg src="./github.svg"/>
+      <div className="contact-text">
+        <text>Github</text>
+        <subtext>Miratari</subtext>
+      </div>
+    </div>
+  );
+}
+
+function Project({ title, tags, brief, description }) {
+  return (
+    <div className="project">
+      <h2>{title}</h2>
     </div>
   );
 }
@@ -22,14 +35,31 @@ function App() {
         </div>
       </header>
 
+      <div class="contact-container">
+        <Contact></Contact>
+      </div>
+
       <section>
-        <header>section header</header>
-        new section I think
+        <header>
+          Projects
+        </header>
+        <Project title="TypED" brief="Full-stack web application using React and MongoDB."></Project>
+        <Project title="Simple Discord RP"></Project>
+        <Project title="Spotify Playlist Title Generator"></Project>
+        <Project title="asdfasdf"></Project>
       </section>
       
       <section>
         <header>
-          section header 2
+          Work Experience
+        </header>
+        another section
+        
+      </section>
+
+      <section>
+        <header>
+          Other Creative Works
         </header>
         another section
       </section>

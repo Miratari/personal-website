@@ -2,6 +2,7 @@ html {
   justify-content: center;
   background-color: #ffffff;
   font-family: 'Helvetica' 'Arial' 'sans-serif';
+  --accent-color: #BA160C;
 }
 
 * {
@@ -13,7 +14,7 @@ html {
 
 body {
   justify-content: center;
-  display: grid;
+  display: block;
 }
 
 #page {
@@ -25,12 +26,13 @@ body {
   max-width: 99vw;
   min-width: 70vw;
   min-height: 90vh;
+  margin: 1rem;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  background-color:#BA160C;
+  /* display: flex;
+  flex-direction: column; */
+  background-color: var(--accent-color);
   color: white;
   border-radius: 1.5rem;
   text-align: start;
@@ -41,7 +43,6 @@ body {
   font-size: 7rem;
   padding: 1.8rem;
   padding-bottom: 0.7rem;
-  /* padding-right: 5rem; */
   margin: 0px;
   max-width: 99vw;
   min-width: 70vw;
@@ -73,6 +74,46 @@ body {
 }
 
 section {
-  border-width: 2px;
+  border-width: 4px;
   border-style: solid;
+  border-color:var(--accent-color);
+  text-align: left;
+  margin-top: 3rem;
+}
+
+section header {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.3rem;
+  /* padding-bottom: 0.7rem; */
+  /* padding-right: 5rem; */
+  margin: 0px;
+  max-width: 99vw;
+  min-width: 70vw;
+}
+
+.contact-container {
+  padding: 0.3rem;
+  margin-top: 1rem;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.contact {
+  padding: 0px;
+}
+
+.project {
+  padding: 0.5rem;
+}
+
+.project:hover {
+  background-color: rgb(213, 213, 213);
+}
+
+.project h2 {
+  margin: 0px;
+  font-size: 1.3rem;
 }
