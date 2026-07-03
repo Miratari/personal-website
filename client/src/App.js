@@ -67,7 +67,7 @@ function App() {
         <Project title="TypED" brief="Full-stack web application using React and MongoDB."></Project>
         <Project title="Simple Discord RP"></Project>
         <Project title="Spotify Playlist Title Generator"></Project>
-        <Project title="asdfasdf"></Project>
+        <Project title="More Projects"></Project>
       </section>
       
       <section>
@@ -84,6 +84,10 @@ function App() {
         </header>
         another section
       </section>
+
+      <footer>
+        Designed and coded by a human.
+      </footer>
     </div>
   );
 }
