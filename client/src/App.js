@@ -70,7 +70,7 @@ function App() {
         <Project 
           title="Simple Discord RP"/>
         <Project 
-          title="Spotify Playlist Title Generator"/>
+          title="Cal Hacks 9.0"/>
         <Project 
           title="More Projects"/>
       </section>
@@ -79,7 +79,12 @@ function App() {
         <header>
           Work Experience
         </header>
-        another section
+        <Project
+          title="AWS Intern"
+          brief=""/>
+        <Project
+          title="Freelance Web Dev"
+          brief=""/>
         
       </section>
 

@@ -24,8 +24,6 @@ a {
   justify-content: center;
   display: grid;
   grid-row: auto;
-  max-width: 100rem;
-  /* min-height: 90vh; */
   margin: 5vw;
 }
 
@@ -51,16 +49,11 @@ footer {
   padding: 1.8rem;
   padding-bottom: 0.7rem;
   margin: 0px;
-  /* 
-  flex-grow: what percentage of the other objects' size this one should be at MAX. 
-  flex-shrink: what percentage idk
-  flex-basis: sets the initial main size.
-  */
 }
 
 .header .dividing-line {
   border-color: var(--background-color);
-  border-width: 2px;
+  border-top-width: 3px;
   border-style: solid;
   flex: 0 0 auto;
 }
@@ -79,7 +72,7 @@ footer {
 
 section {
   box-shadow: 10px 10px var(--shadow-color);
-  border-width: 4px;
+  border-width: 3px;
   border-style: solid;
   border-color: var(--accent-color);
   text-align: left;
@@ -91,7 +84,7 @@ section header {
   background-color: var(--accent-color);
   color: var(--background-color);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.3rem;
   /* padding-bottom: 0.7rem; */
   /* padding-right: 5rem; */
@@ -106,9 +99,9 @@ section header {
 
 .contact-container {
   margin-top: 3rem;
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-  height: 4rem;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  height: 4.1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -164,5 +157,6 @@ section header {
 
 .project h2 {
   margin: 0px;
-  font-size: 1.3rem;
+  font-size: 2rem;
+  font-weight: 450;
 }
