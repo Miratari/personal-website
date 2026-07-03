@@ -53,7 +53,7 @@ function App() {
           icon={resume} 
           text="Resume" 
           subtext="View PDF" 
-          href="https://"/>
+          href="./resume.pdf"/>
         <Contact 
           icon={mail} 
           text="Email" 
@@ -64,10 +64,15 @@ function App() {
         <header>
           Projects
         </header>
-        <Project title="TypED" brief="Full-stack web application using React and MongoDB."></Project>
-        <Project title="Simple Discord RP"></Project>
-        <Project title="Spotify Playlist Title Generator"></Project>
-        <Project title="More Projects"></Project>
+        <Project 
+          title="TypED" 
+          brief="Full-stack web application using React and MongoDB."/>
+        <Project 
+          title="Simple Discord RP"/>
+        <Project 
+          title="Spotify Playlist Title Generator"/>
+        <Project 
+          title="More Projects"/>
       </section>
       
       <section>

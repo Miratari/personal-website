@@ -1,8 +1,10 @@
 html {
-  background-color: #ffffff;
   font-family: 'Helvetica' 'Arial' 'sans-serif';
-  --accent-color: #BA160C;
-  --highlight-color: #e6e6e6;
+  --accent-color: #ba160c;
+  --background-color: #ffffff;
+  --shadow-color: #000000;
+  --hover-color: #e6e6e6;
+  background-color: var(--background-color);
 }
 
 * {
@@ -19,13 +21,11 @@ a {
 
 #page {
   text-align: center;
-  justify-content: center; /* horizontal alignment */
-  align-items: center; /* vertical alignment */
+  justify-content: center;
   display: grid;
   grid-row: auto;
-  max-width: 99vw;
-  min-width: 70vw;
-  min-height: 90vh;
+  max-width: 100rem;
+  /* min-height: 90vh; */
   margin: 5vw;
 }
 
@@ -38,13 +38,11 @@ footer {
 /* HEADER / HERO TEXT STYLE */
 
 .header {
-  /* display: flex;
-  flex-direction: column; */
   background-color: var(--accent-color);
-  color: white;
-  border-radius: 1.5rem;
+  color: var(--background-color);
+  /* border-radius: 1.5rem; */
   text-align: start;
-  /* box-shadow: 10px 10px black; */
+  box-shadow: 10px 10px var(--shadow-color);
 }
 
 .header h1 {
@@ -53,8 +51,6 @@ footer {
   padding: 1.8rem;
   padding-bottom: 0.7rem;
   margin: 0px;
-  max-width: 99vw;
-  min-width: 70vw;
   /* 
   flex-grow: what percentage of the other objects' size this one should be at MAX. 
   flex-shrink: what percentage idk
@@ -63,7 +59,7 @@ footer {
 }
 
 .header .dividing-line {
-  border-color: white;
+  border-color: var(--background-color);
   border-width: 2px;
   border-style: solid;
   flex: 0 0 auto;
@@ -82,25 +78,26 @@ footer {
 }
 
 section {
-  /* box-shadow: 10px 10px black; */
+  box-shadow: 10px 10px var(--shadow-color);
   border-width: 4px;
   border-style: solid;
-  border-color:var(--accent-color);
+  border-color: var(--accent-color);
   text-align: left;
   margin-top: 4rem;
+  /* max-width: 30rem; */
 }
 
 section header {
   background-color: var(--accent-color);
-  color: white;
+  color: var(--background-color);
   font-weight: bold;
   font-size: 2rem;
   padding: 0.3rem;
   /* padding-bottom: 0.7rem; */
   /* padding-right: 5rem; */
   margin: 0px;
-  max-width: 99vw;
-  min-width: 70vw;
+  /* max-width: 99vw;
+  min-width: 70vw; */
 }
 
 
@@ -108,15 +105,17 @@ section header {
 /* CONTACT STYLE */
 
 .contact-container {
-  margin-top: 1rem;
+  margin-top: 3rem;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+  height: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 @media (max-width: 45em) {
   .contact-container {
     grid-template-columns: repeat(2, 1fr);
+    height: 8rem;
   }
 }
 
@@ -124,10 +123,11 @@ section header {
   padding: 0.3rem;
   display: flex;
   width: 0.25fr;
+  transition: 150ms;
 }
 
 .contact:hover {
-  background-color: var(--highlight-color);
+  background-color: var(--hover-color);
 }
 
 .contact-icon {
@@ -155,10 +155,11 @@ section header {
 
 .project {
   padding: 0.5rem;
+  transition: 150ms;
 }
 
 .project:hover {
-  background-color: var(--highlight-color);
+  background-color: var(--hover-color);
 }
 
 .project h2 {
