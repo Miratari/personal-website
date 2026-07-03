@@ -1,16 +1,19 @@
-// import logo from './logo.svg';
 import github from './github.svg';
+import linkedin from './linkedin.svg';
+import mail from './mail.svg';
+import resume from './resume.svg';
+
 import './App.css';
 
 function Contact({ icon, text, subtext, href }) {
   return (
-    <div className="contact">
-      <svg src="./github.svg"/>
+    <a className="contact" href={href}>
+      <img className="contact-icon" src={icon}/>
       <div className="contact-text">
-        <text>Github</text>
-        <subtext>Miratari</subtext>
+        <text>{text}</text>
+        <sub>{subtext}</sub>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -36,7 +39,25 @@ function App() {
       </header>
 
       <div class="contact-container">
-        <Contact></Contact>
+        <Contact 
+          icon={github} 
+          text="Github" 
+          subtext="@Miratari" 
+          href="https://github.com/Miratari"/>
+        <Contact 
+          icon={linkedin} 
+          text="LinkedIn" 
+          subtext="Koa Lee" 
+          href="https://www.linkedin.com/in/koa-lee-476b2b226/"/>
+        <Contact 
+          icon={resume} 
+          text="Resume" 
+          subtext="View PDF" 
+          href="https://"/>
+        <Contact 
+          icon={mail} 
+          text="Email" 
+          subtext="koalee10@gmail.com"/>
       </div>
 
       <section>

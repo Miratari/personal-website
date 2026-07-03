@@ -1,8 +1,8 @@
 html {
-  justify-content: center;
   background-color: #ffffff;
   font-family: 'Helvetica' 'Arial' 'sans-serif';
   --accent-color: #BA160C;
+  --highlight-color: #e6e6e6;
 }
 
 * {
@@ -12,9 +12,9 @@ html {
   border-width: 0px;
 }
 
-body {
-  justify-content: center;
-  display: block;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 #page {
@@ -26,8 +26,12 @@ body {
   max-width: 99vw;
   min-width: 70vw;
   min-height: 90vh;
-  margin: 1rem;
+  margin: 5vw;
 }
+
+
+
+/* HEADER / HERO TEXT STYLE */
 
 .header {
   /* display: flex;
@@ -36,6 +40,7 @@ body {
   color: white;
   border-radius: 1.5rem;
   text-align: start;
+  /* box-shadow: 10px 10px black; */
 }
 
 .header h1 {
@@ -69,16 +74,16 @@ body {
 .header sub {
   display: block;
   font-size: 2rem;
-  /* margin-top: 5px; */
   text-wrap: nowrap;
 }
 
 section {
+  /* box-shadow: 10px 10px black; */
   border-width: 4px;
   border-style: solid;
   border-color:var(--accent-color);
   text-align: left;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 section header {
@@ -94,23 +99,62 @@ section header {
   min-width: 70vw;
 }
 
+
+
+/* CONTACT STYLE */
+
 .contact-container {
-  padding: 0.3rem;
   margin-top: 1rem;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 45em) {
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .contact {
-  padding: 0px;
+  padding: 0.3rem;
+  display: flex;
+  width: 0.25fr;
 }
+
+.contact:hover {
+  background-color: var(--highlight-color);
+}
+
+.contact-icon {
+  height: 3rem;
+  padding-right: 0.4rem;
+}
+
+.contact-text {
+  text-align: left;
+  display: grid;
+  font-size: 1rem;
+}
+
+.contact-text text {
+  font-weight: bold;
+}
+
+.contact-text sub {
+  font-weight: light;
+}
+
+
+
+/* PROJECT STYLE */
 
 .project {
   padding: 0.5rem;
 }
 
 .project:hover {
-  background-color: rgb(213, 213, 213);
+  background-color: var(--highlight-color);
 }
 
 .project h2 {
