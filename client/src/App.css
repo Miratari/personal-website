@@ -113,7 +113,6 @@ section header {
 .contact {
   padding: 0.3rem;
   display: flex;
-  width: 0.25fr;
   transition: 150ms;
 }
 
@@ -148,17 +147,19 @@ section header {
   padding: 0.5rem;
   transition: 150ms;
   cursor: pointer;
+  width: auto;
 }
 
 .project-preview {
   text-align: left;
   background-color: transparent;
   display: grid;
-  gap: 1rem;
-  width: 100%;
-  grid-template-columns: auto minmax(auto, 100vw) auto;
+  gap: 0.3rem;
+  min-width: 100%;
+  max-width: 60rem;
+  grid-template-columns: auto minmax(auto, 100rem) auto;
   grid-template-areas: "title brief arrow";
-  align-items: center;
+  align-items: end;
 }
 @media (max-width: 45em) {
   .project-preview {
@@ -175,21 +176,27 @@ section header {
   margin: 0px;
   font-size: 2rem;
   font-weight: bold;
-  width: auto;
+  padding-right: 0.5rem;
 }
 
 .project-preview h3 {
   margin: 0px;
   font-size: 1rem;
-  font-weight: lighter;
+  font-weight: normal;
   overflow: hidden;
   text-wrap-mode: nowrap;
   text-overflow: ellipsis;
+  padding-bottom: 0.3rem;
+}
+@media (max-width: 45em) {
+  .project-preview h3 {
+    padding-bottom: 0px;
+  }
 }
 
 .project-preview h4 {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: normal;
   margin: 0px;
   width: 2rem;
 }

@@ -73,7 +73,7 @@ function App() {
         </header>
         <Project 
           title="TypED" 
-          brief="Full-stack web app using React and MongoDB."/>
+          brief="Full-stack web app using React and MongoDB"/>
         <Project 
           title="Simple Discord RP"
           brief="test text here"/>
@@ -88,7 +88,7 @@ function App() {
         </header>
         <Project
           title="SDE Intern, AWS"
-          brief=""/>
+          brief="Backend database infrastructure, Amazon Timestream"/>
         <Project
           title="Freelance Web Dev"
           brief=""/>
