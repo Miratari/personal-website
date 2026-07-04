@@ -20,7 +20,14 @@ function Contact({ icon, text, subtext, href }) {
 function Project({ title, tags, brief, description }) {
   return (
     <div className="project">
-      <h2>{title}</h2>
+      <button type="button" className="project-preview">
+        <h2 style={{gridArea: "title"}}>{title}</h2>
+        <h3 style={{gridArea: "brief"}}>{brief}</h3>
+        <h4 style={{gridArea: "arrow"}}>+</h4>
+      </button>
+      <div className="project-content">
+
+      </div>
     </div>
   );
 }
@@ -66,13 +73,13 @@ function App() {
         </header>
         <Project 
           title="TypED" 
-          brief="Full-stack web application using React and MongoDB."/>
+          brief="Full-stack web app using React and MongoDB."/>
         <Project 
-          title="Simple Discord RP"/>
+          title="Simple Discord RP"
+          brief="test text here"/>
         <Project 
-          title="Cal Hacks 9.0"/>
-        <Project 
-          title="More Projects"/>
+          title="Cal Hacks 9.0"
+          brief="More test text goes right here. Here's what it would look like with a really long brief."/>
       </section>
       
       <section>
@@ -80,7 +87,7 @@ function App() {
           Work Experience
         </header>
         <Project
-          title="AWS Intern"
+          title="SDE Intern, AWS"
           brief=""/>
         <Project
           title="Freelance Web Dev"
@@ -92,11 +99,13 @@ function App() {
         <header>
           Other Creative Works
         </header>
-        another section
+        <Project
+          title="TIO @ Berkeley"
+          brief=""/>
       </section>
 
       <footer>
-        Designed and coded by a human.
+        Designed and coded by myself, not robots.
       </footer>
     </div>
   );
