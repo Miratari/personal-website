@@ -1,10 +1,12 @@
 html {
   font-family: 'Helvetica' 'Arial' 'sans-serif';
+  /* font-size: 14px; */
   --accent-color: #ba160c;
   --background-color: #ffffff;
   --shadow-color: #000000;
   --hover-color: #e6e6e6;
   background-color: var(--background-color);
+  
 }
 
 * {
@@ -71,7 +73,7 @@ footer {
 }
 
 section {
-  box-shadow: 10px 10px var(--shadow-color);
+  box-shadow: 10px 10px 0px var(--shadow-color);
   border-width: 3px;
   border-style: solid;
   border-color: var(--accent-color);
@@ -114,9 +116,9 @@ section header {
   display: flex;
   transition: 150ms;
 }
-
 .contact:hover {
   background-color: var(--hover-color);
+  box-shadow: 0px 0px 0.3rem var(--shadow-color);
 }
 
 .contact-icon {
@@ -150,6 +152,7 @@ section header {
 }
 
 .project-preview {
+  cursor: pointer;
   text-align: left;
   background-color: transparent;
   display: grid;
@@ -166,9 +169,10 @@ section header {
     grid-template-areas: "title arrow" "brief brief";
   }
 }
-
 .active, .project:hover {
   background-color: var(--hover-color);
+  box-shadow: 0px 0px 0.3rem var(--shadow-color);
+  cursor: pointer;
 }
 
 .project-preview h2 {

@@ -75,11 +75,11 @@ function App() {
           title="TypED" 
           brief="Full-stack web app using React and MongoDB"/>
         <Project 
-          title="Simple Discord RP"
-          brief="test text here"/>
+          title="Simple Discord Status"
+          brief="Steam Deck/Linux app for manual Discord API integration"/>
         <Project 
           title="Cal Hacks 9.0"
-          brief="More test text goes right here. Here's what it would look like with a really long brief."/>
+          brief="Python app for AI sentiment analysis of Spotify songs"/>
       </section>
       
       <section>
@@ -101,7 +101,7 @@ function App() {
         </header>
         <Project
           title="TIO @ Berkeley"
-          brief=""/>
+          brief="Orchestral/Jazz arrangements of video game music"/>
       </section>
 
       <footer>
