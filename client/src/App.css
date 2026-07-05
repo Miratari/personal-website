@@ -157,7 +157,7 @@ section header {
   background-color: transparent;
   display: grid;
   gap: 0.3rem;
-  min-width: 100%;
+  /* min-width: 100%; */
   max-width: 60rem;
   grid-template-columns: auto minmax(auto, 100rem) auto;
   grid-template-areas: "title brief arrow";
@@ -201,5 +201,5 @@ section header {
   font-size: 2rem;
   font-weight: normal;
   margin: 0px;
-  width: 2rem;
+  /* width: 2rem; */
 }
