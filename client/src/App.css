@@ -5,8 +5,9 @@ html {
   --background-color: #ffffff;
   --shadow-color: #000000;
   --hover-color: #e6e6e6;
+  --static-shadow: 20px 20px 0px var(--shadow-color);
+  --hover-shadow: 0px 0px 0.3rem var(--shadow-color) inset;
   background-color: var(--background-color);
-  
 }
 
 * {
@@ -42,7 +43,7 @@ footer {
   color: var(--background-color);
   /* border-radius: 1.5rem; */
   text-align: start;
-  box-shadow: 10px 10px var(--shadow-color);
+  box-shadow: var(--static-shadow);
 }
 
 .header h1 {
@@ -73,7 +74,7 @@ footer {
 }
 
 section {
-  box-shadow: 10px 10px 0px var(--shadow-color);
+  box-shadow: var(--static-shadow);
   border-width: 3px;
   border-style: solid;
   border-color: var(--accent-color);
@@ -118,7 +119,7 @@ section header {
 }
 .contact:hover {
   background-color: var(--hover-color);
-  box-shadow: 0px 0px 0.3rem var(--shadow-color);
+  box-shadow: var(--hover-shadow);
 }
 
 .contact-icon {
@@ -165,13 +166,13 @@ section header {
 }
 @media (max-width: 45em) {
   .project-preview {
-    grid-template-columns: auto 1rem;
+    grid-template-columns: minmax(auto, 100rem) 1rem;
     grid-template-areas: "title arrow" "brief brief";
   }
 }
 .active, .project:hover {
   background-color: var(--hover-color);
-  box-shadow: 0px 0px 0.3rem var(--shadow-color);
+  box-shadow: var(--hover-shadow);
   cursor: pointer;
 }
 
@@ -202,4 +203,8 @@ section header {
   font-weight: normal;
   margin: 0px;
   /* width: 2rem; */
+}
+
+.project-content {
+  margin: 0.5rem;
 }

@@ -26,7 +26,7 @@ function Project({ title, tags, brief, description }) {
         <h4 style={{gridArea: "arrow"}}>+</h4>
       </button>
       <div className="project-content">
-
+        {description}
       </div>
     </div>
   );
@@ -73,7 +73,8 @@ function App() {
         </header>
         <Project 
           title="TypED" 
-          brief="Full-stack web app using React and MongoDB"/>
+          brief="Full-stack web app using React and MongoDB"
+          description="This is filler text for one of the descriptions. When I actually get the formatting done, I'll replace this with more accurate text."/>
         <Project 
           title="Simple Discord Status"
           brief="Steam Deck/Linux app for manual Discord API integration"/>
