@@ -75,8 +75,11 @@ function App() {
           title="TypED" 
           brief="Full-stack web app using React and MongoDB"
           description="This is filler text for one of the descriptions. When I actually get the formatting done, I'll replace this with more accurate text."/>
+        <Project
+          title="Home Server"
+          brief="Linux-based home media server made with Claude Code"/>
         <Project 
-          title="Simple Discord Status"
+          title="Steam Discord Status"
           brief="Steam Deck/Linux app for manual Discord API integration"/>
         <Project 
           title="Cal Hacks 9.0"
