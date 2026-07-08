@@ -45,28 +45,6 @@ function App() {
         </div>
       </header>
 
-      <div class="contact-container">
-        <Contact 
-          icon={github} 
-          text="Github" 
-          subtext="@Miratari" 
-          href="https://github.com/Miratari"/>
-        <Contact 
-          icon={linkedin} 
-          text="LinkedIn" 
-          subtext="Koa Lee" 
-          href="https://www.linkedin.com/in/koa-lee-476b2b226/"/>
-        <Contact 
-          icon={resume} 
-          text="Resume" 
-          subtext="View PDF" 
-          href="./resume.pdf"/>
-        <Contact 
-          icon={mail} 
-          text="Email" 
-          subtext="koalee10@gmail.com"/>
-      </div>
-
       <section>
         <header>
           Projects
@@ -107,6 +85,28 @@ function App() {
           title="TIO @ Berkeley"
           brief="Orchestral/Jazz arrangements of video game music"/>
       </section>
+
+      <div class="contact-container">
+        <Contact 
+          icon={github} 
+          text="Github" 
+          subtext="@Miratari" 
+          href="https://github.com/Miratari"/>
+        <Contact 
+          icon={linkedin} 
+          text="LinkedIn" 
+          subtext="Koa Lee" 
+          href="https://www.linkedin.com/in/koa-lee-476b2b226/"/>
+        <Contact 
+          icon={resume} 
+          text="Resume" 
+          subtext="View PDF" 
+          href="./resume.pdf"/>
+        <Contact 
+          icon={mail} 
+          text="Email" 
+          subtext="koalee10@gmail.com"/>
+      </div>
 
       <footer>
         Designed and coded by myself, not robots.
