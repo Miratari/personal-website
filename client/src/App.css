@@ -45,7 +45,7 @@ p {
                        "contact"
                        "footer";
   margin: 5vw;
-  gap: 3rem;
+  gap: 5rem;
 }
 @media (min-width: 45em) {
   #page {
@@ -78,8 +78,9 @@ section header {
   background-color: var(--accent-color);
   color: var(--text-color-light);
   font-weight: bold;
-  font-size: 1.5rem;
-  padding: 0.3rem;
+  font-size: 2rem;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
   padding-bottom: 1.5rem;
   margin: 0px;
 }
@@ -89,7 +90,7 @@ section .section-content {
   border-style: none;
   border-color: var(--accent-color);
   border-top-style: none;
-  padding: 0.8rem;
+  padding: 0.5rem;
 }
 
 
@@ -121,7 +122,24 @@ section .section-content {
   border-top-style: solid;
   font-size: 3rem;
   font-weight: bold;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 45em) {
+  #header {
+    justify-content: center;
+  }
+  #header .title-text {
+    font-size: 10rem;
+  }
+  #header .subtitle-text {
+    font-size: 4rem;
+    padding-bottom: 5rem;
+    flex-grow: 0;
+  }
+  #header .content-text {
+    font-size: 4.5rem;
+  }
 }
 
 
@@ -140,7 +158,7 @@ section .section-content {
 
 #about .section-content {
   color: var(--text-color-light);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 

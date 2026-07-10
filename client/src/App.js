@@ -47,9 +47,13 @@ function App() {
           About
         </header>
         <div class="section-content">
-          Hi, I'm Koa! This is my personal website. This is placeholder text, until I can write an actual bio. <br/>
+          Hi, I'm <b>Koa!</b> This is my personal website. This is placeholder text, until I can write an actual bio. <br/>
           <br/>
-          This should also invite the user to keep scrolling, so they can see what projects I have made and what I am interested in.
+          This should also invite the user to keep scrolling, so they can see what projects I have made and what I am interested in. For contact information, see the bottom of the webpage.<br/>
+          <br/>
+          Please enjoy!<br/>
+          <br/>
+          <br/>
         </div>
       </section>
 
@@ -116,7 +120,7 @@ function App() {
       </div>
 
       <footer style={{gridArea: "footer"}}>
-        Designed and coded by myself, not robots.
+        Designed and coded by hand, not AI.
       </footer>
     </div>
   );
