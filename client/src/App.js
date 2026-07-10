@@ -35,58 +35,65 @@ function Project({ title, tags, brief, description }) {
 function App() {
   return (
     <div id="page">
-      <header class="header">
-        <h1>Koa Lee</h1>
-        <div class="dividing-line"></div>
-        <div class="list">
-          <sub>Software Engineer</sub>
-          <sub>Web Designer</sub>
-          <sub>Creative</sub>
-        </div>
-      </header>
 
-      <section>
+      <section id="header" style={{gridArea: "header"}}>
+        <p class="title-text">Koa Lee</p>
+        <p class="subtitle-text">Software Engineer, Web Designer, Creative</p>
+        <p class="content-text">Personal Portfolio Website</p>
+      </section>
+
+      <section id="about" style={{gridArea: "about"}}>
+        <header>
+          About
+        </header>
+        <div class="section-content">
+          Hi, I'm Koa! This is my personal website. This is placeholder text, until I can write an actual bio. <br/>
+          <br/>
+          This should also invite the user to keep scrolling, so they can see what projects I have made and what I am interested in.
+        </div>
+      </section>
+
+      <section style={{gridArea: "projects"}}>
         <header>
           Projects
         </header>
-        <Project 
-          title="TypED" 
-          brief="Full-stack web app using React and MongoDB"
-          description="This is filler text for one of the descriptions. When I actually get the formatting done, I'll replace this with more accurate text."/>
-        <Project
-          title="Home Server"
-          brief="Linux-based home media server made with Claude Code"/>
-        <Project 
-          title="Steam Discord Status"
-          brief="Steam Deck/Linux app for manual Discord API integration"/>
-        <Project 
-          title="Cal Hacks 9.0"
-          brief="Python app for AI sentiment analysis of Spotify songs"/>
+        <div class="section-content">
+          <Project 
+            title="TypED" 
+            brief="Full-stack web app using React and MongoDB"
+            description="This is filler text for one of the descriptions. When I actually get the formatting done, I'll replace this with more accurate text."/>
+          <Project
+            title="Home Server"
+            brief="Linux-based home media server made with Claude Code"/>
+        </div>
       </section>
       
-      <section>
+      <section style={{gridArea: "work"}}>
         <header>
           Work Experience
         </header>
-        <Project
-          title="SDE Intern, AWS"
-          brief="Backend database infrastructure, Amazon Timestream"/>
-        <Project
-          title="Freelance Web Dev"
-          brief=""/>
-        
+        <div class="section-content">
+          <Project
+            title="SDE Intern, AWS"
+            brief="Backend database infrastructure, Amazon Timestream"/>
+          <Project
+            title="Freelance Web Dev"
+            brief="Consultation and site development for LA-based real estate company"/>
+        </div>
       </section>
 
-      <section>
+      <section style={{gridArea: "other"}}>
         <header>
           Other Creative Works
         </header>
-        <Project
-          title="TIO @ Berkeley"
-          brief="Orchestral/Jazz arrangements of video game music"/>
+        <div class="section-content">
+          <Project
+            title="TIO @ Berkeley"
+            brief="Orchestral/Jazz arrangements of video game music"/>
+        </div>
       </section>
 
-      <div class="contact-container">
+      <div class="contact-container" style={{gridArea: "contact"}}>
         <Contact 
           icon={github} 
           text="Github" 
@@ -108,7 +115,7 @@ function App() {
           subtext="koalee10@gmail.com"/>
       </div>
 
-      <footer>
+      <footer style={{gridArea: "footer"}}>
         Designed and coded by myself, not robots.
       </footer>
     </div>
