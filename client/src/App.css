@@ -88,9 +88,9 @@ section header {
 }
 
 section .section-content {
-  border-width: var(--line-width);
+  /* border-width: var(--line-width); */
   border-style: solid;
-  border-color: var(--text-color-dark);
+  border-color: var(--accent-color);
   
 }
 
@@ -209,8 +209,6 @@ section .section-content {
 
 .project {
   cursor: pointer;
-  border-style: solid;
-  border-width: 1px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-auto-rows: auto;
