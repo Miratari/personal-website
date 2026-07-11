@@ -54,11 +54,11 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "header header"
-                         "projects about"
-                         "projects about"
-                         "projects other"
+                         "about projects"
+                         "about projects"
+                         "work projects"
                          "work other"
-                         "work contact"
+                         "contact other"
                          "footer footer";
   }
 }
@@ -89,10 +89,9 @@ section header {
 
 section .section-content {
   border-width: var(--line-width);
-  border-style: none;
-  border-color: var(--accent-color);
-  border-top-style: none;
-  padding: 0.5rem;
+  border-style: solid;
+  border-color: var(--text-color-dark);
+  
 }
 
 
@@ -113,12 +112,12 @@ section .section-content {
 #header .title-text {
   padding-top: 1rem;
   font-size: 5rem;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 #header .subtitle-text {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 200;
   flex-grow: 1;
 }
 
@@ -156,8 +155,11 @@ section .section-content {
 }
 
 #about .section-content {
+  padding: 0.5rem;
   color: var(--text-color-light);
   font-size: 1.2rem;
+  font-weight: 300;
+  border-style: none;
 }
 
 
@@ -206,64 +208,46 @@ section .section-content {
 /* PROJECT STYLE */
 
 .project {
-  transition: 150ms;
   cursor: pointer;
-  /* width: auto; */
-}
-
-.project-preview {
-  cursor: pointer;
-  text-align: left;
-  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
   display: grid;
-  gap: 0.3rem;
-  max-width: 60rem;
-  grid-template-columns: minmax(auto, 100rem) 1rem;
-  grid-template-areas: "title arrow" "brief brief";
-  align-items: end;
-}
-/* @media (min-width: 45em) {
-  .project-preview {
-    grid-template-columns: auto minmax(auto, 100rem) auto;
-    grid-template-areas: "title brief arrow";
-  }
-} */
-.active, .project:hover {
-  background-color: var(--hover-color);
-  cursor: pointer;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "title title"
+                       "type links"
+                       "desc desc";
 }
 
-.project-preview h2 {
-  margin: 0px;
+.project * {
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-style: none;
+}
+
+.project .title {
+  font-weight:700;
   font-size: 2rem;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  /* padding-bottom: 1.5rem; */
+  margin: 0px;
+  width: 100;
+}
+
+.project .type {
   font-weight: bold;
-  padding-right: 0.5rem;
-}
-
-.project-preview h3 {
-  margin: 0px;
   font-size: 1rem;
-  font-weight: normal;
-  overflow: hidden;
-  text-wrap-mode: nowrap;
-  text-overflow: ellipsis;
-  padding-bottom: 0px;
-}
-@media (min-width: 45em) {
-  .project-preview h3 {
-    padding-bottom: 0.3rem;
-  }
+  padding: 0.5rem;
 }
 
-.project-preview h4 {
-  font-size: 2rem;
-  font-weight: normal;
-  margin: 0px;
-  /* width: 2rem; */
+.project .links {
+  padding: 0.5rem;
 }
 
-.project-content {
-  margin: 0.48rem;
-  margin-top: 1rem;
-  display: none;
+.project .desc {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  padding-bottom: 1.5rem;
 }

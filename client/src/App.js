@@ -17,17 +17,13 @@ function Contact({ icon, text, subtext, href }) {
   );
 }
 
-function Project({ title, tags, brief, description }) {
+function Project({ title, type, links, desc }) {
   return (
     <div className="project">
-      <button type="button" className="project-preview">
-        <h2 style={{gridArea: "title"}}>{title}</h2>
-        <h3 style={{gridArea: "brief"}}>{brief}</h3>
-        <h4 style={{gridArea: "arrow"}}>+</h4>
-      </button>
-      <div className="project-content">
-        {description}
-      </div>
+      <div className="title" style={{gridArea: "title"}}>{title}</div>
+      <div className="type" style={{gridArea: "type"}}>{type}</div>
+      <div className="links" style={{gridArea: "links"}}>{links}</div>
+      <div className="desc" style={{gridArea: "desc"}}>{desc}</div>
     </div>
   );
 }
@@ -64,11 +60,20 @@ function App() {
         <div class="section-content">
           <Project 
             title="TypED" 
-            brief="Full-stack web app using React and MongoDB"
-            description="This is filler text for one of the descriptions. When I actually get the formatting done, I'll replace this with more accurate text."/>
+            type="Web App"
+            links="test"
+            desc="Full-stack typing game made using React and MongoDB."/>
+          <Project
+            title="Simple Discord Status"
+            type="Utility"
+            desc="Displays current active Steam Deck game as Discord status."/>
           <Project
             title="Home Server"
-            brief="Linux-based home media server made with Claude Code"/>
+            type="IT/Networking"
+            desc="Linux-based home media server made with Claude Code."/>
+          <Project
+            title="CalHacks 9.0"
+            type="Utility"/>
         </div>
       </section>
       
