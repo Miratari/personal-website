@@ -17,12 +17,13 @@ function Contact({ icon, text, subtext, href }) {
   );
 }
 
-function Project({ title, type, links, desc }) {
+function Project({ title, type, demo, source, desc }) {
   return (
     <div className="project">
       <div className="title" style={{gridArea: "title"}}>{title}</div>
       <div className="type" style={{gridArea: "type"}}>{type}</div>
-      <div className="links" style={{gridArea: "links"}}>{links}</div>
+      <a className="links" style={{gridArea: "demo"}} href={demo}>{demo ? "Demo" : null}</a>
+      <a className="links" style={{gridArea: "source"}} href={source}>{source ? "Source" : null}</a>
       <div className="desc" style={{gridArea: "desc"}}>{desc}</div>
     </div>
   );
@@ -58,20 +59,22 @@ function App() {
         <div class="section-content">
           <Project 
             title="TypED" 
-            type="Web App"
-            links="test"
+            type="Web App - 2023"
+            demo="https://typed-mauve.vercel.app/"
+            source="https://github.com/noah-whelann/typing-game"
             desc="Full-stack typing game made using React and MongoDB."/>
           <Project
             title="Simple Discord Status"
-            type="Utility"
+            type="Utility - 2025"
+            source="https://github.com/Miratari/steam-deck-simple-discord-status"
             desc="Displays current active Steam Deck game as Discord status."/>
           <Project
             title="Home Server"
-            type="IT/Networking"
+            type="IT/Networking - 2026"
             desc="Linux-based home media server made with Claude Code."/>
           <Project
             title="CalHacks 9.0"
-            type="Utility"/>
+            type="Utility - 2022"/>
         </div>
       </section>
       

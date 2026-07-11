@@ -206,39 +206,57 @@ section .section-content {
 /* PROJECT STYLE */
 
 .project {
-  cursor: pointer;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr auto auto;
   grid-auto-rows: auto;
-  grid-template-areas: "title title"
-                       "type links"
-                       "desc desc";
-}
-
-.project * {
-  border-width: 1px;
-  border-style: solid;
-  border-bottom-style: none;
+  grid-template-areas: "title title title"
+                       "type demo source"
+                       "desc desc desc";
 }
 
 .project .title {
-  font-weight:700;
+  font-weight:300;
   font-size: 2rem;
   padding: 0.2rem;
   padding-left: 0.5rem;
   /* padding-bottom: 1.5rem; */
   margin: 0px;
   width: 100;
+  /* border-bottom-width: 0.1rem;
+  border-bottom-style: solid; */
 }
 
 .project .type {
   font-weight: bold;
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
 }
 
 .project .links {
-  padding: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.2rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-left-width: 0.1rem;
+  border-left-style: solid;
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+  border-color:var(--text-color-light);
+}
+.project .links:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color-dark);
+}
+.project .links:active {
+  background-color: var(--hover-color);
+  color: var(--text-color-dark);
+}
+.project .links:empty {
+  display: none;
 }
 
 .project .desc {
@@ -246,4 +264,6 @@ section .section-content {
   font-weight: 300;
   padding: 0.5rem;
   padding-bottom: 1.5rem;
+  /* border-top-width: 0.1rem;
+  border-top-style: solid; */
 }
