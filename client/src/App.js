@@ -88,7 +88,7 @@ function App() {
 
       <section style={{gridArea: "other"}}>
         <header>
-          Other Creative Works
+          Other
         </header>
         <div class="section-content">
           <Project

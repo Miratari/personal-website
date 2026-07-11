@@ -8,7 +8,6 @@ html {
   --text-color-light: #ffffff;
   --text-color-dark: #000000;
   --static-shadow: 0rem 0rem 0px var(--shadow-color);
-  --hover-shadow: 0px 0px 0rem var(--shadow-color) inset;
   --line-width: 3px;
   background-color: var(--background-color);
 }
@@ -72,7 +71,6 @@ footer {
 section {
   box-shadow: var(--static-shadow);
   text-align: left;
-  margin: 0.4rem;
 }
 
 section header {
@@ -101,6 +99,7 @@ section .section-content {
 #header {
   border-width: 0px;
   height: calc(100vh - 10vw);
+  height: calc(100svh - 10vw);
   display: flex;
   flex-direction: column;
 }
@@ -181,7 +180,6 @@ section .section-content {
 }
 .contact:hover {
   background-color: var(--hover-color);
-  box-shadow: var(--hover-shadow);
 }
 
 .contact-icon {
@@ -232,7 +230,6 @@ section .section-content {
 } */
 .active, .project:hover {
   background-color: var(--hover-color);
-  box-shadow: var(--hover-shadow);
   cursor: pointer;
 }
 
