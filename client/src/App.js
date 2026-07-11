@@ -17,14 +17,17 @@ function Contact({ icon, text, subtext, href }) {
   );
 }
 
-function Project({ title, type, demo, source, desc }) {
+function Project({ title, type, demo, note, src, desc, yt, ig }) {
   return (
     <div className="project">
       <div className="title" style={{gridArea: "title"}}>{title}</div>
       <div className="type" style={{gridArea: "type"}}>{type}</div>
       <a className="links" style={{gridArea: "demo"}} href={demo}>{demo ? "Demo" : null}</a>
-      <a className="links" style={{gridArea: "source"}} href={source}>{source ? "Source" : null}</a>
+      <a className="links" style={{gridArea: "source"}} href={src}>{src ? "GitHub" : null}</a>
+      <a className="links" style={{gridArea: "yt"}} href={yt}>{yt ? "YouTube" : null}</a>
+      <a className="links" style={{gridArea: "ig"}} href={ig}>{ig ? "Instagram" : null}</a>
       <div className="desc" style={{gridArea: "desc"}}>{desc}</div>
+      <div className="note" style={{gridArea: "note"}}>{note}</div>
     </div>
   );
 }
@@ -44,9 +47,11 @@ function App() {
           About
         </header>
         <div class="section-content">
-          Hi, I'm <b>Koa!</b> This is my personal website. This is placeholder text, until I can write an actual bio. <br/>
+          Hi, I'm <b>Koa!</b> I like to make stuff.<br/>
           <br/>
-          This website is still very much a work in progress, so things will probably change a lot very frequently. I'm still trying to strike a balance between a simple industrial design, and not making it look like nutrition facts.<br/>
+          I'm a UC Berkeley Computer Science graduate, and enjoy making simple and intuitive apps and tools. On this site you can find a handful of the open-source projects I have both contributed to and created on my own. When I'm not on the computer, I like to play and write music, as well as take photos.<br/>
+          <br/>
+          To learn more, or to get in touch, keep scrolling!<br/>
           <br/>
           <br/>
         </div>
@@ -61,20 +66,23 @@ function App() {
             title="TypED" 
             type="Web App - 2023"
             demo="https://typed-mauve.vercel.app/"
-            source="https://github.com/noah-whelann/typing-game"
-            desc="Full-stack typing game made using React and MongoDB."/>
+            src="https://github.com/noah-whelann/typing-game"
+            desc="A full-stack typing game made using React and MongoDB. Fetches words from a random word API, and calculates user typing speed and accuracy, storing user data between matches. AI-assisted development using GitHub Copilot."
+            note="Word API broken as of Jul 2026"/>
           <Project
             title="Simple Discord Status"
             type="Utility - 2025"
-            source="https://github.com/Miratari/steam-deck-simple-discord-status"
-            desc="Displays current active Steam Deck game as Discord status."/>
+            src="https://github.com/Miratari/steam-deck-simple-discord-status"
+            desc="Displays current active Steam Deck game as Discord status. Integrates directly with Discord API. Utilizes TypeScript for frontend interface, and Python for backend API calls."/>
           <Project
             title="Home Server"
             type="IT/Networking - 2026"
-            desc="Linux-based home media server made with Claude Code."/>
+            desc="A Linux-based home media server created and maintained with Claude Code. Custom domain management and routing via Porkbun and Nginx Proxy Manager."/>
           <Project
-            title="CalHacks 9.0"
-            type="Utility - 2022"/>
+            title="Playlist Name Generator"
+            type="Utility - 2022"
+            src="https://github.com/ehuang1126/Playlist-Name-Generator"
+            desc="AI summarization on lyrics of Spotify songs to generate content-aware playlist titles. Utilizes Cohere NLP model API."/>
         </div>
       </section>
       
@@ -85,10 +93,12 @@ function App() {
         <div class="section-content">
           <Project
             title="SDE Intern, AWS"
-            brief="Backend database infrastructure, Amazon Timestream"/>
+            type="Amazon Timestream - 2024"
+            desc="Backend database infrastructure, Amazon Timestream"/>
           <Project
-            title="Freelance Web Dev"
-            brief="Consultation and site development for LA-based real estate company"/>
+            title="Web Developer"
+            type="Angeleno Homes LLC - 2023"
+            desc="Freelance consultation and website development for LA-based real estate company."/>
         </div>
       </section>
 
@@ -99,7 +109,16 @@ function App() {
         <div class="section-content">
           <Project
             title="TIO @ Berkeley"
-            brief="Orchestral/Jazz arrangements of video game music"/>
+            type="Music"
+            yt="https://www.youtube.com/@tioatberkeley"
+            ig="https://www.instagram.com/tioatberkeley/"
+            desc="UC Berkeley's anime, video game, and film orchestra. I've arranged and conducted full orchestra pieces and smaller jazz ensembles, and have performed as a percussionist, drummer, and bassist."
+            note="Carousel of YouTube videos coming soon"/>
+          <Project
+            title="Photography"
+            type="Photography"
+            desc="I like to take photos."
+            note="Carousel of photos coming soon"/>
         </div>
       </section>
 

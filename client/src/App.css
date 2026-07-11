@@ -55,10 +55,9 @@ p {
     grid-auto-rows: auto;
     grid-template-areas: "header header"
                          "about projects"
-                         "about projects"
-                         "work projects"
-                         "work other"
-                         "contact other"
+                         "other projects"
+                         "other projects"
+                         "work contact"
                          "footer footer";
   }
 }
@@ -209,9 +208,10 @@ section .section-content {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-auto-rows: auto;
-  grid-template-areas: "title title title"
-                       "type demo source"
-                       "desc desc desc";
+  grid-template-areas: "title title title title title"
+                       "type demo source yt ig"
+                       "desc desc desc desc desc"
+                       "note note note note note";
 }
 
 .project .title {
@@ -263,7 +263,13 @@ section .section-content {
   font-size: 1.2rem;
   font-weight: 300;
   padding: 0.5rem;
-  padding-bottom: 1.5rem;
   /* border-top-width: 0.1rem;
   border-top-style: solid; */
+}
+.project .note {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0.5rem;
+  padding-bottom: 1.5rem;
 }
