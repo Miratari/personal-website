@@ -45,9 +45,7 @@ function App() {
         <div class="section-content">
           Hi, I'm <b>Koa!</b> This is my personal website. This is placeholder text, until I can write an actual bio. <br/>
           <br/>
-          This should also invite the user to keep scrolling, so they can see what projects I have made and what I am interested in. For contact information, see the bottom of the webpage.<br/>
-          <br/>
-          Please enjoy!<br/>
+          This website is still very much a work in progress, so things will probably change a lot very frequently. I'm still trying to strike a balance between a simple industrial design, and not making it look like nutrition facts.<br/>
           <br/>
           <br/>
         </div>
