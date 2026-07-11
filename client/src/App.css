@@ -10,6 +10,8 @@ html {
   --static-shadow: 0rem 0rem 0px var(--shadow-color);
   --line-width: 3px;
   background-color: var(--background-color);
+  display: grid;
+  justify-content: center;
 }
 
 * {
@@ -45,6 +47,7 @@ p {
                        "footer";
   margin: 5vw;
   gap: 5rem;
+  max-width: 90rem;
 }
 @media (min-width: 45em) {
   #page {
@@ -98,10 +101,13 @@ section .section-content {
 
 #header {
   border-width: 0px;
+  min-height: 30rem;
   height: calc(100vh - 10vw);
   height: calc(100svh - 10vw);
   display: flex;
   flex-direction: column;
+  /* position: sticky;
+  top: -30vh; */
 }
 
 #header .title-text {
@@ -127,17 +133,11 @@ section .section-content {
 @media (min-width: 45em) {
   #header {
     justify-content: center;
-  }
-  #header .title-text {
-    font-size: 10rem;
+    min-height: 0px;
   }
   #header .subtitle-text {
-    font-size: 4rem;
-    padding-bottom: 7rem;
-    flex-grow: 0;
-  }
-  #header .content-text {
-    font-size: 4.5rem;
+    max-height: 7rem;
+    flex-grow: 1;
   }
 }
 
