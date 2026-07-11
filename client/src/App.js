@@ -22,7 +22,7 @@ function Project({ title, type, demo, note, src, desc, yt, ig }) {
     <div className="project">
       <div className="title" style={{gridArea: "title"}}>{title}</div>
       <div className="type" style={{gridArea: "type"}}>{type}</div>
-      <a className="links" style={{gridArea: "demo"}} href={demo}>{demo ? "Demo" : null}</a>
+      <a className="links" style={{gridArea: "demo"}} href={demo}>{demo ? "Site" : null}</a>
       <a className="links" style={{gridArea: "source"}} href={src}>{src ? "GitHub" : null}</a>
       <a className="links" style={{gridArea: "yt"}} href={yt}>{yt ? "YouTube" : null}</a>
       <a className="links" style={{gridArea: "ig"}} href={ig}>{ig ? "Instagram" : null}</a>
@@ -77,7 +77,7 @@ function App() {
           <Project
             title="Home Server"
             type="IT/Networking - 2026"
-            desc="A Linux-based home media server created and maintained with Claude Code. Custom domain management and routing via Porkbun and Nginx Proxy Manager."/>
+            desc="A Docker-based Linux home media server created and maintained with Claude Code. Custom domain management and routing via Porkbun and Nginx Proxy Manager."/>
           <Project
             title="Playlist Name Generator"
             type="Utility - 2022"
@@ -94,11 +94,12 @@ function App() {
           <Project
             title="SDE Intern, AWS"
             type="Amazon Timestream - 2024"
-            desc="Backend database infrastructure, Amazon Timestream"/>
+            demo="https://aws.amazon.com/timestream/"
+            desc="Designed and implemented database infrastructure upgrades, improving scalability for over 100,000 InfluxDB instances. Enabled dynamic integration with AWS services such as S3, EC2, ECS (Kubernetes), CloudWatch, and IAM."/>
           <Project
             title="Web Developer"
             type="Angeleno Homes LLC - 2023"
-            desc="Freelance consultation and website development for LA-based real estate company."/>
+            desc="Freelance consultation and website development for LA-based real estate company. Designed a simple web interface for collecting and processing online home valuation requests with custom JavaScript."/>
         </div>
       </section>
 
@@ -112,13 +113,13 @@ function App() {
             type="Music"
             yt="https://www.youtube.com/@tioatberkeley"
             ig="https://www.instagram.com/tioatberkeley/"
-            desc="UC Berkeley's anime, video game, and film orchestra. I've arranged and conducted full orchestra pieces and smaller jazz ensembles, and have performed as a percussionist, drummer, and bassist."
+            desc="UC Berkeley's anime, video game, and film orchestra. I've arranged and conducted pieces for full orchestra and smaller jazz ensembles, and have performed as a percussionist, drummer, and bassist."
             note="Carousel of YouTube videos coming soon"/>
-          <Project
+          {/* <Project
             title="Photography"
             type="Photography"
-            desc="I like to take photos."
-            note="Carousel of photos coming soon"/>
+            desc="More coming soon."
+            note="Carousel of photos coming soon"/> */}
         </div>
       </section>
 
