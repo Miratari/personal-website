@@ -49,7 +49,7 @@ function App() {
         <div class="section-content">
           Hi, I'm <b>Koa!</b> I like to make stuff.<br/>
           <br/>
-          I'm a UC Berkeley Computer Science graduate, and enjoy making intuitive apps and tools. On this site you can find a handful of my open-source creations and contributions. When I'm not on the computer, I like to play music, write music, and take photos.<br/>
+          I'm a UC Berkeley Computer Science graduate, and enjoy making useful apps and cool interfaces. On this site you can find a handful of my open-source creations and contributions. When I'm not on the computer, I like to play music, write music, and take photos.<br/>
           <br/>
           To learn more, or to get in touch, keep scrolling!<br/>
           <br/>
