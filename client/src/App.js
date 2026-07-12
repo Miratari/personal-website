@@ -49,7 +49,7 @@ function App() {
         <div class="section-content">
           Hi, I'm <b>Koa!</b> I like to make stuff.<br/>
           <br/>
-          I'm a UC Berkeley Computer Science graduate, and enjoy making simple and intuitive apps and tools. On this site you can find a handful of the open-source projects I have both contributed to and created on my own. When I'm not on the computer, I like to play and write music, as well as take photos.<br/>
+          I'm a UC Berkeley Computer Science graduate, and enjoy making intuitive apps and tools. On this site you can find a handful of my open-source creations and contributions. When I'm not on the computer, I like to play music, write music, and take photos.<br/>
           <br/>
           To learn more, or to get in touch, keep scrolling!<br/>
           <br/>
@@ -67,22 +67,22 @@ function App() {
             type="Web App - 2023"
             demo="https://typed-mauve.vercel.app/"
             src="https://github.com/noah-whelann/typing-game"
-            desc="A full-stack typing game made using React and MongoDB. Fetches words from a random word API, and calculates user typing speed and accuracy, storing user data between matches. AI-assisted development using GitHub Copilot."
+            desc="A full-stack typing game using React and MongoDB. Generates random words and calculates user typing speed and accuracy, storing user data between matches."
             note="Word API broken as of Jul 2026"/>
           <Project
             title="Simple Discord Status"
             type="Utility - 2025"
             src="https://github.com/Miratari/steam-deck-simple-discord-status"
-            desc="Displays current active Steam Deck game as Discord status. Integrates directly with Discord API. Utilizes TypeScript for frontend interface, and Python for backend API calls."/>
+            desc="Plugin for the Valve Steam Deck to display the current game as Discord status. Integrates directly with Discord API."/>
           <Project
             title="Home Server"
             type="IT/Networking - 2026"
-            desc="A Docker-based Linux home media server created and maintained with Claude Code. Custom domain management and routing via Porkbun and Nginx Proxy Manager."/>
+            desc="My personal Docker-based Linux home media server. Created and maintained with Claude Code, with custom domain routing powered by Nginx Proxy Manager."/>
           <Project
             title="Playlist Name Generator"
             type="Utility - 2022"
             src="https://github.com/ehuang1126/Playlist-Name-Generator"
-            desc="AI summarization on lyrics of Spotify songs to generate content-aware playlist titles. Utilizes Cohere NLP model API."/>
+            desc="Script to generate content-aware Spotify playlist titles from AI analysis of song lyrics. Utilizes Cohere NLP. Made for CalHacks 9.0 hackathon."/>
         </div>
       </section>
       
@@ -92,14 +92,14 @@ function App() {
         </header>
         <div class="section-content">
           <Project
-            title="SDE Intern, AWS"
-            type="Amazon Timestream - 2024"
+            title="SDE Intern"
+            type="Amazon Timestream, AWS - 2024"
             demo="https://aws.amazon.com/timestream/"
-            desc="Designed and implemented database infrastructure upgrades, improving scalability for over 100,000 InfluxDB instances. Enabled dynamic integration with AWS services such as S3, EC2, ECS (Kubernetes), CloudWatch, and IAM."/>
+            desc="I designed and implemented scalable infrastructure upgrades for over 100,000 InfluxDB instances. Enabled dynamic backend integration with AWS services such as S3, EC2, ECS (Kubernetes), CloudWatch, and IAM."/>
           <Project
             title="Web Developer"
             type="Angeleno Homes LLC - 2023"
-            desc="Freelance consultation and website development for LA-based real estate company. Designed a simple web interface for collecting and processing online home valuation requests with custom JavaScript."/>
+            desc="Freelance consultation and website development for LA-based real estate company. I designed a simple web interface for collecting and processing online home valuation requests."/>
         </div>
       </section>
 
@@ -113,7 +113,7 @@ function App() {
             type="Music"
             yt="https://www.youtube.com/@tioatberkeley"
             ig="https://www.instagram.com/tioatberkeley/"
-            desc="UC Berkeley's anime, video game, and film orchestra. I've arranged and conducted pieces for full orchestra and smaller jazz ensembles, and have performed as a percussionist, drummer, and bassist."
+            desc="UC Berkeley's anime, video game, and film music orchestra. I've arranged and conducted pieces for full orchestra and small jazz ensembles, and have performed as a percussionist, drummer, and bassist."
             note="Carousel of YouTube videos coming soon"/>
           {/* <Project
             title="Photography"
