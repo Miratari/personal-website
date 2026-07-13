@@ -21,6 +21,13 @@ html {
   border-width: 0px;
 }
 
+body {
+  background-image: radial-gradient(var(--hover-color) 1.3px, transparent 0);
+  background-size: 1rem 1rem;
+  background-attachment: fixed;
+
+}
+
 a, button {
   text-decoration: none;
   font-family: inherit;
@@ -57,8 +64,8 @@ p {
     grid-template-areas: "header header"
                          "about projects"
                          "work projects"
-                         "work projects"
-                         "other contact"
+                         "work other"
+                         "contact contact"
                          "footer footer";
   }
 }
@@ -170,6 +177,12 @@ section .section-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media (min-width: 45em) {
+  .contact-container {
+    grid-template-columns: repeat(4, 1fr);
+    height: 4rem;
+  }
+}
 
 .contact {
   color: var(--text-color-dark);
@@ -205,6 +218,7 @@ section .section-content {
 /* PROJECT STYLE */
 
 .project {
+  box-shadow: var(--static-shadow);
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-auto-rows: auto;
@@ -246,6 +260,7 @@ section .section-content {
   background-color: var(--accent-color);
   color: var(--text-color-light);
   border-color:var(--text-color-light);
+  transition-duration: 200ms;
 }
 .project .links:hover {
   background-color: var(--hover-color);
@@ -260,7 +275,7 @@ section .section-content {
 }
 
 .project .desc {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   padding: 0.5rem;
   /* border-top-width: 0.1rem;

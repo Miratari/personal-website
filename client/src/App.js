@@ -35,7 +35,6 @@ function Project({ title, type, demo, note, src, desc, yt, ig }) {
 function App() {
   return (
     <div id="page">
-
       <section id="header" style={{gridArea: "header"}}>
         <p class="title-text">Koa Lee</p>
         <p class="subtitle-text">Software Engineer, Web Designer, Creative</p>
@@ -49,7 +48,7 @@ function App() {
         <div class="section-content">
           Hi, I'm <b>Koa!</b> I like to make stuff.<br/>
           <br/>
-          I'm a UC Berkeley Computer Science graduate, and enjoy making useful apps and cool interfaces. On this site you can find a handful of my open-source creations and contributions. When I'm not on the computer, I like to play music, write music, and take photos.<br/>
+          I'm a UC Berkeley Computer Science graduate, and enjoy making useful apps and cool interfaces. On this site you can find a handful of my open-source creations and contributions. When I'm not on the computer, I like to play and write music.<br/>
           <br/>
           To learn more, or to get in touch, keep scrolling!<br/>
           <br/>
@@ -73,7 +72,7 @@ function App() {
             title="Simple Discord Status"
             type="Utility - 2025"
             src="https://github.com/Miratari/steam-deck-simple-discord-status"
-            desc="Plugin for the Valve Steam Deck to display the current game as Discord status. Integrates directly with Discord API."/>
+            desc="A Steam Deck plugin to display the current active game via Discord status. Integrates directly with Discord API."/>
           <Project
             title="Home Server"
             type="IT/Networking - 2026"
@@ -82,7 +81,7 @@ function App() {
             title="Playlist Name Generator"
             type="Utility - 2022"
             src="https://github.com/ehuang1126/Playlist-Name-Generator"
-            desc="Script to generate content-aware Spotify playlist titles from AI analysis of song lyrics. Utilizes Cohere NLP. Made for CalHacks 9.0 hackathon."/>
+            desc="Script to generate content-aware Spotify playlist titles from AI analysis of song lyrics. Utilizes Cohere NLP, made for CalHacks 9.0 hackathon."/>
         </div>
       </section>
       
@@ -92,8 +91,8 @@ function App() {
         </header>
         <div class="section-content">
           <Project
-            title="SDE Intern"
-            type="Amazon Timestream, AWS - 2024"
+            title="SDE Intern, AWS"
+            type="Amazon Timestream - 2024"
             demo="https://aws.amazon.com/timestream/"
             desc="I designed and implemented scalable infrastructure upgrades for over 100,000 InfluxDB instances. Enabled dynamic backend integration with AWS services such as S3, EC2, ECS (Kubernetes), CloudWatch, and IAM."/>
           <Project
@@ -146,7 +145,7 @@ function App() {
       </div>
 
       <footer style={{gridArea: "footer"}}>
-        Designed and coded by hand, not AI.
+        Updated July 2026.<br/>Designed and coded by hand, not AI.
       </footer>
     </div>
   );
