@@ -248,7 +248,7 @@ section .section-content {
                        "type type type type type"
                        "desc desc desc desc desc"
                        "note note note note note"
-                       "no demo source yt ig";
+                       "_ demo source yt ig";
 }
 .project:hover {
   box-shadow: var(--static-shadow);
