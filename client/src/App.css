@@ -42,7 +42,6 @@ p {
   background-color: var(--app-background);
   background-image: radial-gradient(var(--line-color) 1.3px, transparent 0);
   background-size: 1rem 1rem;
-  background-attachment: fixed;
 }
 
 #page-content {
@@ -69,7 +68,7 @@ p {
     grid-template-areas: "header header"
                          "about projects"
                          "work projects"
-                         "work other"
+                         "other projects"
                          "contact contact"
                          "footer footer";
   }
@@ -120,6 +119,7 @@ section .section-content {
   flex-direction: column;
   background-color: var(--accent-color);
   padding: 1rem;
+  margin-bottom: 3rem;
   color: var(--text-color-light);
 }
 
@@ -275,6 +275,7 @@ section .section-content {
   font-style: italic;
   font-size: 0.8rem;
   font-weight: 100;
+  padding-bottom: 0.5rem;
 }
 
 .project .links {
@@ -282,7 +283,6 @@ section .section-content {
   font-size: 0.8rem;
   cursor: pointer;
   padding: 0.5rem;
-  margin-top: 1rem;
   transition-duration: 200ms;
 
   text-align: center;

@@ -79,14 +79,14 @@ function App() {
               src="https://github.com/Miratari/steam-deck-simple-discord-status"
               desc="A Steam Deck plugin to display the current active game via Discord status."/>
             <Project
-              title="Home Server"
-              type="IT / Networking - 2026"
-              desc="Personal Docker-based Linux home media server."/>
-            <Project
               title="Playlist Name Generator"
               type="Utility - 2022"
               src="https://github.com/ehuang1126/Playlist-Name-Generator"
               desc="Generates content-aware Spotify playlist titles from AI analysis of song lyrics. Made for CalHacks 9.0 hackathon."/>
+            <Project
+              title="Home Server"
+              type="IT / Networking - 2026"
+              desc="Personal Docker-based Linux home media server."/>
           </div>
         </section>
         
