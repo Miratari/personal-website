@@ -3,16 +3,17 @@ html {
   /* font-size: 16px; */
   --accent-color: #B1140B; /* Original: #BA160C */
   --background-color: #ffffff;
-  --shadow-color: #000000;
-  --hover-color: #e8e8e8;
+  --app-background: rgb(248, 248, 248);
+  --shadow-color: #0000001e;
+  --line-color: #d7d7d7;
   --text-color-light: #ffffff;
   --text-color-dark: #000000;
-  --static-shadow: 0rem 0rem 0px var(--shadow-color);
+  --static-shadow: 0rem 0rem 1rem var(--shadow-color);
   --line-width: 0.3rem;
+  --border-radius: 1rem;
   background-color: var(--background-color);
   display: grid;
   justify-content: center;
-  perspective: 100px;
 }
 
 * {
@@ -38,7 +39,8 @@ p {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: radial-gradient(var(--hover-color) 1.3px, transparent 0);
+  background-color: var(--app-background);
+  background-image: radial-gradient(var(--line-color) 1.3px, transparent 0);
   background-size: 1rem 1rem;
   background-attachment: fixed;
 }
@@ -57,9 +59,7 @@ p {
                        "other"
                        "contact"
                        "footer";
-  margin: 5vw;
   margin-top: 0px;
-  gap: 5rem;
   max-width: 90rem;
 }
 @media (min-width: 45em) {
@@ -77,6 +77,7 @@ p {
 
 footer {
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 
@@ -84,29 +85,25 @@ footer {
 /* SECTION STYLE */
 
 section {
-  box-shadow: var(--static-shadow);
   text-align: left;
+  margin: 1rem;
+  /* max-width: 30rem; */
 }
 
 section header {
-  background-color: var(--accent-color);
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
   font-weight: bold;
-  font-size: 2rem;
-  padding: 0.2rem;
-  padding-left: 0.5rem;
+  font-size: 3rem;
   padding-bottom: 1.5rem;
   margin: 0px;
-
-  border-bottom-color: var(--background-color);
-  border-bottom-width: var(--line-width);
-  border-style: solid;
 }
 
 section .section-content {
   /* border-width: var(--line-width); */
   border-style: solid;
   border-color: var(--accent-color);
+  display: grid;
+  gap: 1rem;
 }
 
 
@@ -114,14 +111,16 @@ section .section-content {
 /* HEADER / HERO TEXT STYLE */
 
 #header {
-  border-width: 0px;
   min-height: 30rem;
-  height: calc(100vh - 0rem);
-  height: calc(100svh - 0rem);
+  max-width: 200vw;
+  margin: 0;
+  height: calc(100vh);
+  height: calc(100svh);
   display: flex;
   flex-direction: column;
-  /* position: sticky;
-  top: -30vh; */
+  background-color: var(--accent-color);
+  padding: 1rem;
+  color: var(--text-color-light);
 }
 
 #header .title-text {
@@ -139,6 +138,7 @@ section .section-content {
 #header .content-text {
   border-top-width: var(--line-width);
   border-top-style: solid;
+  border-top-color: var(--text-color-light);
   font-size: 3rem;
   font-weight: bold;
   padding-bottom: 2rem;
@@ -150,7 +150,7 @@ section .section-content {
     min-height: 0px;
   }
   #header .subtitle-text {
-    max-height: 7rem;
+    max-height: 10rem;
     flex-grow: 1;
   }
 }
@@ -159,16 +159,20 @@ section .section-content {
 
 /* ABOUT STYLE */
 
-#about {
-  background-color: var(--accent-color);
-}
-
 #about .section-content {
-  padding: 0.5rem;
   color: var(--text-color-light);
-  font-size: 1.2rem;
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius);
+
+  padding: 1rem;
+  font-size: 1rem;
   font-weight: 300;
-  border-style: none;
+}
+#about .section-content h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 
@@ -196,7 +200,7 @@ section .section-content {
   transition: 150ms;
 }
 .contact:hover {
-  background-color: var(--hover-color);
+  background-color: var(--line-color);
 }
 
 .contact-icon {
@@ -223,73 +227,80 @@ section .section-content {
 /* PROJECT STYLE */
 
 .project {
-  box-shadow: var(--static-shadow);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--line-color);
+
+  background-color: white;
+
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 0.5rem;
+
+  transition-duration: 200ms;
+
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto auto;
   grid-auto-rows: auto;
   grid-template-areas: "title title title title title"
-                       "type demo source yt ig"
+                       "type type type type type"
                        "desc desc desc desc desc"
-                       "note note note note note";
+                       "note note note note note"
+                       "no demo source yt ig";
+}
+.project:hover {
+  box-shadow: var(--static-shadow);
+  transform:translate(0, -0.2rem);
 }
 
 .project .title {
-  font-weight:300;
-  font-size: 2rem;
-  padding: 0.2rem;
-  padding-left: 0.5rem;
-  /* padding-bottom: 1.5rem; */
-  margin: 0px;
-  width: 100;
-  /* border-bottom-width: 0.1rem;
-  border-bottom-style: solid; */
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .project .type {
-  font-weight: bold;
+  font-weight: 200;
   font-size: 1rem;
-  padding: 0.2rem;
-  padding-left: 0.5rem;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
+}
+
+.project .desc {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.project .note {
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 100;
 }
 
 .project .links {
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 0.8rem;
   cursor: pointer;
-  padding: 0.2rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  border-left-width: 0.1rem;
-  border-left-style: solid;
-  background-color: var(--accent-color);
-  color: var(--text-color-light);
-  border-color:var(--text-color-light);
+  padding: 0.5rem;
+  margin-top: 1rem;
   transition-duration: 200ms;
+
+  text-align: center;
+
+  color: var(--text-color-light);
+  background-color: var(--accent-color);
+
+  border-color:var(--text-color-light);
+  border-radius: var(--border-radius);
 }
 .project .links:hover {
-  background-color: var(--hover-color);
+  background-color: var(--line-color);
   color: var(--text-color-dark);
 }
 .project .links:active {
-  background-color: var(--hover-color);
+  background-color: var(--line-color);
   color: var(--text-color-dark);
 }
 .project .links:empty {
   display: none;
-}
-
-.project .desc {
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding: 0.5rem;
-  /* border-top-width: 0.1rem;
-  border-top-style: solid; */
-}
-.project .note {
-  font-style: italic;
-  font-size: 1rem;
-  font-weight: 100;
-  padding: 0.5rem;
-  padding-bottom: 1.5rem;
 }
