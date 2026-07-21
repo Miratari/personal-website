@@ -101,9 +101,9 @@ function App() {
               demo="https://aws.amazon.com/timestream/"
               desc="Designed and implemented scalable infrastructure upgrades for Amazon Timestream for InfluxDB."/>
             <Project
-              title="Web Developer"
+              title="Web Developer, Consultant"
               type="Angeleno Homes LLC - 2023"
-              desc="Freelance consultation and website development for LA-based real estate company."/>
+              desc="Designed and deployed landing page for processing customer home valuation requests."/>
           </div>
         </section>
 
