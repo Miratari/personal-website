@@ -72,7 +72,7 @@ function App() {
               demo="https://typed-mauve.vercel.app/"
               src="https://github.com/noah-whelann/typing-game"
               desc="A full-stack typing game using React and MongoDB."
-              note="Word API broken as of Jul 2026"/>
+              note="Word API broken as of Jul 2026 :("/>
             <Project
               title="Simple Discord Status"
               type="Utility - 2025"
@@ -82,7 +82,8 @@ function App() {
               title="Playlist Name Generator"
               type="Utility - 2022"
               src="https://github.com/ehuang1126/Playlist-Name-Generator"
-              desc="Generates content-aware Spotify playlist titles from AI analysis of song lyrics. Made for CalHacks 9.0 hackathon."/>
+              desc="Generates content-aware Spotify playlist titles from AI analysis of song lyrics."
+              note="Made for CalHacks 9.0 hackathon"/>
             <Project
               title="Home Server"
               type="IT / Networking - 2026"
