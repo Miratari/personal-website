@@ -7,9 +7,9 @@ import './App.css';
 
 function Contact({ icon, text, subtext, href }) {
   return (
-    <a className="contact" href={href}>
-      <img className="contact-icon" src={icon}/>
-      <div className="contact-text">
+    <a class="contact" href={href}>
+      <img class="contact-icon" src={icon} alt="media icon"/>
+      <div class="contact-text">
         <text>{text}</text>
         <sub>{subtext}</sub>
       </div>
@@ -19,15 +19,15 @@ function Contact({ icon, text, subtext, href }) {
 
 function Project({ title, type, demo, note, src, desc, yt, ig }) {
   return (
-    <div className="project">
-      <div className="title" style={{gridArea: "title"}}>{title}</div>
-      <div className="type" style={{gridArea: "type"}}>{type}</div>
-      <a className="links" style={{gridArea: "demo"}} href={demo}>{demo ? "Website" : null}</a>
-      <a className="links" style={{gridArea: "source"}} href={src}>{src ? "GitHub" : null}</a>
-      <a className="links" style={{gridArea: "yt"}} href={yt}>{yt ? "YouTube" : null}</a>
-      <a className="links" style={{gridArea: "ig"}} href={ig}>{ig ? "Instagram" : null}</a>
-      <div className="desc" style={{gridArea: "desc"}}>{desc}</div>
-      <div className="note" style={{gridArea: "note"}}>{note}</div>
+    <div class="project">
+      <div class="title" style={{gridArea: "title"}}>{title}</div>
+      <div class="type" style={{gridArea: "type"}}>{type}</div>
+      <a class="links" style={{gridArea: "demo"}} href={demo}>{demo ? "Website" : null}</a>
+      <a class="links" style={{gridArea: "source"}} href={src}>{src ? "GitHub" : null}</a>
+      <a class="links" style={{gridArea: "yt"}} href={yt}>{yt ? "YouTube" : null}</a>
+      <a class="links" style={{gridArea: "ig"}} href={ig}>{ig ? "Instagram" : null}</a>
+      <div class="desc" style={{gridArea: "desc"}}>{desc}</div>
+      <div class="note" style={{gridArea: "note"}}>{note}</div>
     </div>
   );
 }
@@ -39,9 +39,9 @@ function App() {
 
       <div id="page-content">
         <section id="header" style={{gridArea: "header"}}>
-          <p class="title-text">Koa Lee</p>
-          <p class="subtitle-text">Software Engineer, Web Designer, Creative</p>
-          <p class="content-text">Personal Portfolio Website</p>
+          <p style={{gridArea: "header-title"}} class="title-text">Koa Lee</p>
+          <p style={{gridArea: "header-subtitle"}} class="subtitle-text">Software Engineer, Web Designer, Creative</p>
+          <p style={{gridArea: "header-content"}} class="content-text">Personal Portfolio Website</p>
         </section>
 
         <section id="about" style={{gridArea: "about"}}>

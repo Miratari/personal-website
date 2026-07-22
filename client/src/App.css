@@ -4,7 +4,7 @@ html {
   --accent-color: #B1140B; /* Original: #BA160C */
   --background-color: #ffffff;
   --app-background: rgb(248, 248, 248);
-  --shadow-color: #0000001e;
+  --shadow-color: #0000003b;
   --line-color: #d7d7d7;
   --text-color-light: #ffffff;
   --text-color-dark: #000000;
@@ -66,9 +66,9 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "header header"
-                         "about projects"
-                         "work projects"
-                         "other projects"
+                         "about about"
+                         "projects work"
+                         "projects other"
                          "contact contact"
                          "footer footer";
   }
@@ -95,6 +95,7 @@ section header {
   font-size: 3rem;
   padding-bottom: 1.5rem;
   margin: 0px;
+  text-shadow: 0px 0px 0.1rem var(--text-color-dark);
 }
 
 section .section-content {
@@ -115,12 +116,20 @@ section .section-content {
   margin: 0;
   height: calc(100vh);
   height: calc(100svh);
-  display: flex;
-  flex-direction: column;
-  background-color: var(--accent-color);
   padding: 1rem;
   margin-bottom: 3rem;
+
+  background-color: var(--accent-color);
   color: var(--text-color-light);
+  text-shadow: 0px 0px 0.1rem var(--text-color-light);
+  box-shadow: var(--static-shadow);
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto 1fr auto;
+  grid-template-areas: "header-title"
+                       "header-subtitle"
+                       "header-content";
 }
 
 #header .title-text {
@@ -146,12 +155,20 @@ section .section-content {
 
 @media (min-width: 45em) {
   #header {
-    justify-content: center;
+    justify-content: start;
     min-height: 0px;
+    height: calc(30vh);
+    height: calc(30svh);
+    margin-bottom: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto 1fr;
+    grid-template-areas: "header-title header-content"
+                        "header-subtitle header-content";
   }
-  #header .subtitle-text {
-    max-height: 10rem;
-    flex-grow: 1;
+  #header .content-text {
+    text-align: right;
+    border-top-width: 0px;
+    padding-top: 1.5rem;
   }
 }
 
@@ -163,16 +180,43 @@ section .section-content {
   color: var(--text-color-light);
   background-color: var(--accent-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--static-shadow);
 
   padding: 1rem;
   font-size: 1rem;
   font-weight: 300;
+  text-align: justify;
+  text-justify:inter-cluster;
 }
 #about .section-content h1 {
   padding: 0;
   margin: 0;
   font-size: 1.2rem;
   font-weight: 500;
+}
+@media (min-width: 45em) {
+  #about header {
+    display: none;
+  }
+  #about {
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+  #about .section-content {
+    padding-left: 25vw;
+    padding-right: 25vw;
+    margin: none;
+    box-shadow: none;
+    border-radius: 0px;
+    height: calc(70vh);
+    height: calc(70svh);
+    align-items: center;
+    text-align: justify;
+    font-size: 1.3rem;
+  }
+  #about .section-content h1 {
+    font-size: 1.8rem;
+  }
 }
 
 
