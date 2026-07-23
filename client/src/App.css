@@ -156,9 +156,9 @@ section .section-content {
 @media (min-width: 45em) {
   #header {
     justify-content: start;
-    min-height: 0px;
-    height: calc(30vh);
-    height: calc(30svh);
+    min-height: calc(40vh);
+    min-height: calc(40svh);
+    height: auto;
     margin-bottom: 0px;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto 1fr;
@@ -208,8 +208,9 @@ section .section-content {
     margin: none;
     box-shadow: none;
     border-radius: 0px;
-    height: calc(70vh);
-    height: calc(70svh);
+    min-height: calc(60vh);
+    min-height: calc(60svh);
+    height: auto;
     align-items: center;
     text-align: justify;
     font-size: 1.3rem;
