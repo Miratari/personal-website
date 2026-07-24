@@ -3,7 +3,7 @@ html {
   /* font-size: 16px; */
   --accent-color: #B1140B; /* Original: #BA160C */
   --background-color: #ffffff;
-  --app-background: rgb(248, 248, 248);
+  --app-background: #f8f8f8;
   --shadow-color: #0000003b;
   --line-color: #d7d7d7;
   --text-color-light: #ffffff;
@@ -11,6 +11,7 @@ html {
   --static-shadow: 0rem 0rem 1rem var(--shadow-color);
   --line-width: 0.3rem;
   --border-radius: 1rem;
+  --accent-texture: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Asvgjs%3D%22http%3A%2F%2Fsvgjs.dev%2Fsvgjs%22%20viewBox%3D%220%200%20700%20700%22%20width%3D%22700%22%20height%3D%22700%22%20opacity%3D%221%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22nnnoise-filter%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20filterUnits%3D%22objectBoundingBox%22%20primitiveUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22linearRGB%22%3E%0A%09%3CfeTurbulence%20type%3D%22turbulence%22%20baseFrequency%3D%220.05%22%20numOctaves%3D%224%22%20seed%3D%2215%22%20stitchTiles%3D%22stitch%22%20x%3D%220%25%22%20y%3D%220%25%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20result%3D%22turbulence%22%3E%3C%2FfeTurbulence%3E%0A%09%3CfeSpecularLighting%20surfaceScale%3D%2228%22%20specularConstant%3D%220.5%22%20specularExponent%3D%2220%22%20lighting-color%3D%22%23ffffff%22%20x%3D%220%25%22%20y%3D%220%25%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20in%3D%22turbulence%22%20result%3D%22specularLighting%22%3E%0A%20%20%20%20%09%09%3CfeDistantLight%20azimuth%3D%223%22%20elevation%3D%2292%22%3E%3C%2FfeDistantLight%3E%0A%20%20%09%3C%2FfeSpecularLighting%3E%0A%20%20%0A%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%22700%22%20height%3D%22700%22%20fill%3D%22%23b1140b%22%3E%3C%2Frect%3E%3Crect%20width%3D%22700%22%20height%3D%22700%22%20fill%3D%22%23ffffff%22%20filter%3D%22url(%23nnnoise-filter)%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
   background-color: var(--background-color);
   display: grid;
   justify-content: center;
@@ -40,8 +41,8 @@ p {
   left: 0;
   z-index: -1;
   background-color: var(--app-background);
-  background-image: radial-gradient(var(--line-color) 1.3px, transparent 0);
-  background-size: 1rem 1rem;
+  background-image: radial-gradient(var(--line-color) 2px, transparent 0);
+  background-size: 2rem 2rem;
 }
 
 #page-content {
@@ -60,6 +61,7 @@ p {
                        "footer";
   margin-top: 0px;
   max-width: 90rem;
+  justify-content: center;
 }
 @media (min-width: 45em) {
   #page-content {
@@ -115,7 +117,7 @@ section .section-content {
   max-width: 200vw;
   margin: 0;
   height: calc(100vh);
-  height: calc(100svh);
+  /* height: calc(100svh); */
   padding: 1rem;
   margin-bottom: 3rem;
 
@@ -123,6 +125,7 @@ section .section-content {
   color: var(--text-color-light);
   text-shadow: 0px 0px 0.1rem var(--text-color-light);
   box-shadow: var(--static-shadow);
+  background-image: var(--accent-texture);
 
   display: grid;
   grid-template-columns: auto;
@@ -141,7 +144,6 @@ section .section-content {
 #header .subtitle-text {
   font-size: 2rem;
   font-weight: 200;
-  flex-grow: 1;
 }
 
 #header .content-text {
@@ -155,20 +157,26 @@ section .section-content {
 
 @media (min-width: 45em) {
   #header {
-    justify-content: start;
-    min-height: calc(40vh);
-    min-height: calc(40svh);
-    height: auto;
-    margin-bottom: 0px;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto 1fr;
-    grid-template-areas: "header-title header-content"
-                        "header-subtitle header-content";
+    grid-auto-rows: auto 1fr auto;
+    /* justify-content: center; */
   }
+
+  #header .title-text {
+    font-size: 7rem;
+  }
+  #header .subtitle-text {
+    font-size: 2.5rem;
+    font-weight: 200;
+    padding-bottom: 4rem;
+  }
+
   #header .content-text {
-    text-align: right;
-    border-top-width: 0px;
-    padding-top: 1.5rem;
+    border-top-width: var(--line-width);
+    border-top-style: solid;
+    border-top-color: var(--text-color-light);
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
   }
 }
 
@@ -176,9 +184,14 @@ section .section-content {
 
 /* ABOUT STYLE */
 
+#about header {
+  display: none;
+}
+
 #about .section-content {
   color: var(--text-color-light);
   background-color: var(--accent-color);
+  background-image: var(--accent-texture);
   border-radius: var(--border-radius);
   box-shadow: var(--static-shadow);
 
@@ -195,28 +208,11 @@ section .section-content {
   font-weight: 500;
 }
 @media (min-width: 45em) {
-  #about header {
-    display: none;
-  }
   #about {
-    margin: 0;
-    margin-bottom: 3rem;
-  }
-  #about .section-content {
-    padding-left: 25vw;
-    padding-right: 25vw;
-    margin: none;
-    box-shadow: none;
-    border-radius: 0px;
-    min-height: calc(60vh);
-    min-height: calc(60svh);
-    height: auto;
-    align-items: center;
-    text-align: justify;
-    font-size: 1.3rem;
-  }
-  #about .section-content h1 {
-    font-size: 1.8rem;
+    max-width: 45em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
