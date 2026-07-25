@@ -152,7 +152,7 @@ function App() {
               ig="https://www.instagram.com/tioatberkeley/"
               desc="UC Berkeley's anime, video game, and film music orchestra. Arranger, conductor, percussionist, drummer, and bassist."
               note="Carousel of YouTube videos coming soon"/>
-            <Carousel items={["hello", "test", "another test", "testing yet again", "idk how many tests I need", "one more", "two more", "three more"]}/>
+            {/* <Carousel items={["hello", "test", "another test", "testing yet again", "idk how many tests I need", "one more", "two more", "three more"]}/> */}
             {/*
             Videos to include:
             - Yoshi's Island
