@@ -91,7 +91,6 @@ section {
   margin: 1rem;
   /* max-width: 30rem; */
 }
-
 section header {
   color: var(--text-color-dark);
   font-weight: bold;
@@ -100,7 +99,6 @@ section header {
   margin: 0px;
   text-shadow: 0px 0px 0.1rem var(--text-color-dark);
 }
-
 section .section-content {
   /* border-width: var(--line-width); */
   border-style: solid;
@@ -135,7 +133,7 @@ section .section-content {
   grid-template-areas: "header-title header-title"
                        "header-subtitle header-subtitle"
                        "_ _"
-                       "header-content header-arrow";
+                       "header-content header-content";
 }
 #header .title-text {
   padding-top: 1rem;
@@ -156,8 +154,9 @@ section .section-content {
   padding-bottom: 0px;
 }
 #header #scroll-arrow {
-  margin-bottom: 2rem;
-  height: 5rem;
+  margin-bottom: 2.5rem;
+  height: 3.5rem;
+  display: none;
 }
 @media (min-width: 45em) {
   #header {
@@ -188,8 +187,7 @@ section .section-content {
   }
 
   #header #scroll-arrow {
-    margin-bottom: 2rem;
-    height: 4rem;
+    display:block;
   }
 }
 
@@ -239,13 +237,6 @@ section .section-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-@media (min-width: 45em) {
-  .contact-container {
-    grid-template-columns: repeat(4, 1fr);
-    height: 4rem;
-  }
-}
-
 .contact {
   color: var(--text-color-dark);
   padding: 0.3rem;
@@ -255,24 +246,26 @@ section .section-content {
 .contact:hover {
   background-color: var(--line-color);
 }
-
 .contact-icon {
   height: 3rem;
   padding-right: 0.4rem;
 }
-
 .contact-text {
   text-align: left;
   display: grid;
   font-size: 1rem;
 }
-
 .contact-text text {
   font-weight: bold;
 }
-
 .contact-text sub {
   font-weight: light;
+}
+@media (min-width: 45em) {
+  .contact-container {
+    grid-template-columns: repeat(4, 1fr);
+    height: 4rem;
+  }
 }
 
 
