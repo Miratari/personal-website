@@ -79,6 +79,7 @@ p {
 footer {
   margin-top: 4rem;
   margin-bottom: 4rem;
+  font-size: 0.8rem;
 }
 
 
@@ -273,7 +274,9 @@ section .section-content {
   border-width: 1px;
   border-color: var(--line-color);
 
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+
+  /* box-shadow: 0rem 0.1rem 0.2rem black inset, 0rem -0.1rem 0.2rem white inset; */
 
   padding: 1rem;
   padding-top: 2rem;
@@ -293,6 +296,7 @@ section .section-content {
 }
 .project:hover {
   box-shadow: var(--static-shadow);
+  /* box-shadow: 0rem 0.1rem 0.2rem white inset, 0rem -0.1rem 0.2rem black inset; */
   transform:translate(0, -0.2rem);
 }
 
@@ -330,6 +334,7 @@ section .section-content {
 
   color: var(--text-color-light);
   background-color: var(--accent-color);
+  background-image: var(--accent-texture);
 
   border-color:var(--text-color-light);
   border-radius: var(--border-radius);
@@ -337,6 +342,7 @@ section .section-content {
 .project .links:hover {
   background-color: var(--line-color);
   color: var(--text-color-dark);
+  background-image: none;
 }
 .project .links:active {
   background-color: var(--line-color);

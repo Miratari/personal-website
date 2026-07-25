@@ -32,6 +32,12 @@ function Project({ title, type, demo, note, src, desc, yt, ig }) {
   );
 }
 
+function YouTube({ title, source, url }) {
+  return (
+    <div></div>
+  )
+}
+
 function App() {
   return (
     <div id="page">
@@ -120,6 +126,18 @@ function App() {
               ig="https://www.instagram.com/tioatberkeley/"
               desc="UC Berkeley's anime, video game, and film music orchestra. Arranger, conductor, percussionist, drummer, and bassist."
               note="Carousel of YouTube videos coming soon"/>
+            {/*
+            Videos to include:
+            - Yoshi's Island
+            - Waterfall
+            - Floral Fury
+            - Mii Channel
+            - Baka Mitai
+            - Mirror Temple
+            - Kirby
+            - Stardew? Cruel Angel's?
+            
+            */}
             {/* <Project
               title="Photography"
               type="Photography"
