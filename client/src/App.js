@@ -17,7 +17,15 @@ function Contact({ icon, text, subtext, href }) {
   );
 }
 
-function Project({ title, type, demo, note, src, desc, yt, ig }) {
+function Project({ title, type, demo, note, src, desc, yt, ig, carousel_items }) {
+  const carousel = null
+
+  if (carousel_items) {
+    carousel_items.forEach((item) => {
+      carousel.push(item)
+    })
+  }
+
   return (
     <div class="project">
       <div class="title" style={{gridArea: "title"}}>{title}</div>
@@ -32,9 +40,26 @@ function Project({ title, type, demo, note, src, desc, yt, ig }) {
   );
 }
 
-function YouTube({ title, source, url }) {
+function Carousel({ items }) {
+  const arr = []
+
+  if (items) {
+    items.forEach((e, index) => {
+      arr.push(<YouTube title={e}/>)
+    })
+  }
+
   return (
-    <div></div>
+    <div class="project">
+      <div class="title" style={{gridArea: "title"}}>YouTube Carousel Test</div>
+      <div class="carousel" style={{gridArea: "carousel"}}>{arr}</div>
+    </div>
+  );
+}
+
+function YouTube({ title, source, roles, year, url }) {
+  return (
+    <div class="youtube-video">{title}</div>
   )
 }
 
@@ -48,6 +73,7 @@ function App() {
           <p style={{gridArea: "header-title"}} class="title-text">Koa Lee</p>
           <p style={{gridArea: "header-subtitle"}} class="subtitle-text">Software Engineer, Web Designer, Creative</p>
           <p style={{gridArea: "header-content"}} class="content-text">Personal Portfolio Website</p>
+          <svg style={{gridArea: "header-arrow"}} id="scroll-arrow" xmlns="http://www.w3.org/2000/svg" width="5rem" height="5rem" viewBox="0 0 512 512"><path fill="currentColor" d="M289.7 341.3V0h-85.4v341.3L33.7 170.7v128L247 512l213.3-213.3v-128z"/></svg>
         </section>
 
         <section id="about" style={{gridArea: "about"}}>
@@ -126,6 +152,7 @@ function App() {
               ig="https://www.instagram.com/tioatberkeley/"
               desc="UC Berkeley's anime, video game, and film music orchestra. Arranger, conductor, percussionist, drummer, and bassist."
               note="Carousel of YouTube videos coming soon"/>
+            <Carousel items={["hello", "test", "another test", "testing yet again", "idk how many tests I need", "one more", "two more", "three more"]}/>
             {/*
             Videos to include:
             - Yoshi's Island
