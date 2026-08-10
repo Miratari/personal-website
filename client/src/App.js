@@ -98,6 +98,11 @@ function App() {
             Projects
           </header>
           <div class="section-content">
+            <Project
+              title="Simple Discord Status"
+              type="Utility - 2025"
+              src="https://github.com/Miratari/steam-deck-simple-discord-status"
+              desc="A Steam Deck plugin to display the current active game via Discord status."/>
             <Project 
               title="TypED" 
               type="Web App - 2023"
@@ -105,11 +110,6 @@ function App() {
               src="https://github.com/noah-whelann/typing-game"
               desc="A full-stack typing game using React and MongoDB."
               note="Word API broken as of Jul 2026 :("/>
-            <Project
-              title="Simple Discord Status"
-              type="Utility - 2025"
-              src="https://github.com/Miratari/steam-deck-simple-discord-status"
-              desc="A Steam Deck plugin to display the current active game via Discord status."/>
             <Project
               title="Playlist Name Generator"
               type="Utility - 2022"
