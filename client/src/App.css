@@ -1,5 +1,6 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: -0.05rem;
   /* font-size: 16px; */
   --accent-color: #ff4f00; /* Original: #B1140B */
   --background-color: #ffffff;
@@ -43,8 +44,8 @@ p {
   left: 0;
   z-index: -1;
   background-color: var(--accent-color);
-  /* background-image: radial-gradient(var(--line-color) 2px, transparent 0);
-  background-size: 2rem 2rem; */
+  /* background-image: radial-gradient(var(--line-color) 2px, transparent 0); */
+  /* background-size: 2rem 2rem; */
   /* background-image: var(--accent-texture); */
 }
 
@@ -60,7 +61,7 @@ p {
   grid-template-areas: ". t1"
                        "t2 t3"
                        "t4 t5"
-                       ". t6"
+                       "t6 t7"
                        ". about"
                        "l-title l1"
                        "l-title l2"
@@ -70,29 +71,18 @@ p {
                        "c-title l6"
                        ". footer";
 }
-@media (min-width: 450000000em) {
-  #page-content {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-    grid-template-areas: "header header"
-                         "about about"
-                         "projects work"
-                         "projects other"
-                         "contact contact"
-                         "footer footer";
-  }
-}
 
 h1 {
   line-height: 3.1rem;
   text-align: left;
   font-weight: 600;
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   margin: 0px;
   /* border: solid black; */
 }
 #t1 {
   color: white;
+  /* font-size: 4.5rem; */
 }
 
 h2 {
@@ -100,13 +90,13 @@ h2 {
   text-align: right;
   margin: 0px;
   margin-right: 0.25rem;
-  margin-top: 1.55rem;
+  /* margin-top: 1.55rem; */
   z-index: 1;
   font-weight: 600;
 }
 
 #about {
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   background-color: var(--text-color-light);
   color: var(--text-color-dark);
   font-size: 1.5rem;
@@ -115,11 +105,11 @@ h2 {
   padding: 1rem;
   padding-right: 0;
   overflow: hidden;
-  width: 16rem;
+  width: 17rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 
-  box-shadow: 110vw 0 0 100vw var(--text-color-light);
+  box-shadow: -110vw 0 0 100vw var(--text-color-light);
   clip-path: inset(0 -100vmax); 
   z-index: 0;
 
@@ -131,7 +121,7 @@ h3 {
   text-align: right;
   margin: 0px;
   margin-right: 0.25rem;
-  margin-top: 1.32rem;  
+  /* margin-top: 1.32rem;   */
   z-index: 1;
   font-weight: 600;
 }
@@ -154,8 +144,8 @@ a:hover {
 footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 1rem;
-  color: var(--text-color-light);
-  font-weight: 400;
-  width: 11rem;
+  font-size: 1.2rem;
+  color: var(--text-color-dark);
+  font-weight: 600;
+  width: 13rem;
 }
