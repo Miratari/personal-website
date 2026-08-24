@@ -1,9 +1,5 @@
-import github from './github.svg';
-import linkedin from './linkedin.svg';
-import mail from './mail.svg';
-import resume from './resume.svg';
-
 import './App.css';
+import { NavLink } from "react-router";
 
 function Contact({ icon, text, subtext, href }) {
   return (
@@ -22,7 +18,7 @@ function App() {
     <div id="page">
       <div id="page-background"></div>
 
-      <div id="pill"></div>
+      {/* <div id="pill"></div> */}
       
       <div id="page-content">
         {/* <section id="header" style={{gridArea: "header"}}>
@@ -41,13 +37,13 @@ function App() {
         <p id="about" style={{gridArea: "about"}}>Hi, I’m Koa! I like to make stuff. This is my personal website, where you can find links to open-source projects and other creative endeavors.</p>
 
         <h3 id="l-title" style={{gridArea: "l-title"}}>Links</h3>
-        <a id="l1" style={{gridArea: "l1"}}>Code</a>
-        <a id="l2" style={{gridArea: "l2"}}>Music</a>
-        <a id="l3" style={{gridArea: "l3"}}>Photos</a>
-        {/* <h3 id="c-title" style={{gridArea: "c-title"}}>Contact</h3> */}
-        <a id="l4" style={{gridArea: "l4"}}>Github</a>
-        <a id="l5" style={{gridArea: "l5"}}>LinkedIn</a>
-        <a id="l6" style={{gridArea: "l6"}}>Email</a>
+        <NavLink id="l1" style={{gridArea: "l1"}} to="/code">Code</NavLink>
+        <NavLink id="l2" style={{gridArea: "l2"}} to="/music">Music</NavLink>
+        <NavLink id="l3" style={{gridArea: "l3"}} to="/photos">Photos</NavLink>
+        <h3 id="c-title" style={{gridArea: "c-title"}}>Contact</h3>
+        <a id="l4" style={{gridArea: "l4"}} href="https://github.com/Miratari">Github</a>
+        <a id="l5" style={{gridArea: "l5"}} href="https://www.linkedin.com/in/koa-lee-476b2b226/">LinkedIn</a>
+        <a id="l6" style={{gridArea: "l6"}} href="mailto:koalee10@gmail.com">Email</a>
       </div>
 
       <footer style={{gridArea: "footer"}}>
