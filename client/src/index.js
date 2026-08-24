@@ -6,14 +6,19 @@ import App from './App';
 import Code from './Code';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="code" element={<Code />} />
-    </Routes>
-  </BrowserRouter>,
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/code" element={<Code />} />
+      </Routes>
+      {/* <div id="pill"></div> */}
+    </BrowserRouter>
+  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

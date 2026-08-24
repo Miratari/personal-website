@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#pill {
+  height: 3rem;
+  width: 4.75rem;
+  position:fixed;
+  top: 1rem;
+  left: 1rem;
+
+  border-radius: 1rem;
+  background-color: var(--text-color-light);
+
+  box-shadow: -102rem 0 0 100rem var(--text-color-light);
+  clip-path: inset(0 -100vmax);
+
+  z-index: 2;
+}
