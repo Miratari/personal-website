@@ -1,18 +1,6 @@
 import './App.css';
 import { NavLink } from "react-router";
 
-function Contact({ icon, text, subtext, href }) {
-  return (
-    <a class="contact" href={href}>
-      <img class="contact-icon" src={icon} alt="media icon"/>
-      <div class="contact-text">
-        <text>{text}</text>
-        <sub>{subtext}</sub>
-      </div>
-    </a>
-  );
-}
-
 function App() {
   return (
     <div id="page">
@@ -31,9 +19,9 @@ function App() {
         <h2 id="t4" style={{gridArea: "t4"}}>Web</h2>
         <h1 id="t5" style={{gridArea: "t5"}}>Designer</h1>
         <h2 id="t6" style={{gridArea: "t6"}}>&</h2>
-        <h1 id="t7" style={{gridArea: "t7"}}>Creative</h1>
+        <h1 id="t7" style={{gridArea: "t7"}}>Creator</h1>
 
-        <p id="about" style={{gridArea: "about"}}>Hi, I'm Koa! I like to make stuff. This is my personal website, where you can find links to open-source repositories and other creative projects.</p>
+        <p id="about" style={{gridArea: "about"}}>Hi, I'm Koa! I like to make stuff. This is my personal website, where you can find links to open-source repositories and other creative projects I've worked on.</p>
 
         <h3 id="l-title" style={{gridArea: "l-title"}}>Links</h3>
         <NavLink id="l1" style={{gridArea: "l1"}} to="/code">Code</NavLink>

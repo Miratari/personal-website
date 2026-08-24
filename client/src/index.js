@@ -14,6 +14,7 @@ ReactDOM.createRoot(root).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/code" element={<Code />} />
+        {/* <Route path="/photos" element={<Photos />} /> */}
       </Routes>
       {/* <div id="pill"></div> */}
     </BrowserRouter>
