@@ -2,10 +2,10 @@
   margin-top: 3rem;
   width: min(25rem, 100vw);
   display: grid;
-  vertical-align: bottom;
   grid-template-columns: 1fr auto;
+  gap: 1rem;
   grid-auto-rows: auto;
-  grid-template-areas: ". t1"
+  grid-template-areas: "back t1"
                        ". t2"
                        "p1d p1c"
                        "p2d p2c"
@@ -15,25 +15,56 @@
 }
 
 #code-content #t2, #code-content #t3 {
-  margin-bottom: 0.75rem;
+  translate: 0 -1rem;
 }
 
-#code-content h2, #code-content a {
-  font-size: 1.5rem;
-  display: block;
+#code-content #back {
+  translate: 2rem 0.25rem;
+  font-size: 1.3rem;
+}
+
+#code-content h2, #code-content h4 {
   line-height: 1.5rem;
-}
-
-#code-content a:hover {
-  color: var(--text-color-dark);
-}
-
-.p-details * {
   margin: 0px;
-  margin-right: 0.3rem;
+}
+
+#code-content h3, #code-content a {
+  line-height: 1rem;
+}
+#code-content > a:hover {
   color: var(--text-color-light);
+}
+
+
+.p-details {
+  display: grid;
+  grid-auto-rows: 1fr auto auto;
+  padding-top: 0.1rem;
+  padding-left: 0.5rem;
+  padding-bottom: 1.1rem;
+  translate: 0.5rem;
+}
+.p-details * {
+  margin: 0;
+  color: var(--text-color-dark);
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+.p-details a:hover {
+  color: var(--accent-color);
+}
+
+.p-content {
+  background-color: var(--text-color-light);
+  padding: 0.5rem;
+  padding-left: 0;
+  margin-right: 0.5rem;
+  border-radius: 1.3rem;
+  translate: 0 -0.5rem;
+
+  box-shadow: -110vw 0 0 100vw var(--text-color-light);
+  clip-path: inset(0 -100vmax); 
+  z-index: -1;
 }
 
 .p-content * {

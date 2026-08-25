@@ -1,15 +1,9 @@
 * {
-  box-sizing: content-box;
   /* border: 1px dotted black; */
 }
 a, button {
   text-decoration: none;
-  font-family: inherit;
   color: var(--text-color-dark);
-}
-p {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 #page {
@@ -26,8 +20,6 @@ p {
   left: 0;
   z-index: -1;
   background-color: var(--accent-color);
-  /* background-image: radial-gradient(var(--line-color) 2px, transparent 0); */
-  /* background-size: 2rem 2rem; */
   background-image: var(--accent-texture);
 }
 
@@ -35,7 +27,6 @@ p {
   margin-top: 3rem;
   width: min(25rem, 100vw);
   display: grid;
-  vertical-align: bottom;
   grid-template-columns: 1fr auto;
   grid-auto-rows: auto;
   grid-template-areas: ". t1"
@@ -84,9 +75,9 @@ h2 {
   font-weight: 600;
 
   padding: 1rem;
-  padding-right: 0;
+  padding-right: 0.5rem;
   overflow: hidden;
-  width: 17rem;
+  width: 16rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 
