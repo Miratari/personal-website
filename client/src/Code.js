@@ -4,14 +4,16 @@ import { NavLink } from "react-router";
 function Project({ id, title, summary, year, gh, site}) {
   let pid = "p" + id;
   return [
-    <div class="p-details" style={{gridArea: pid + "d"}}>
-      <h3>{year ? year : "0000"}</h3>
-      {site ? <a href={site}>Website</a> : ""}
-      {gh ? <a href={gh}>GitHub</a> : ""}
+    <div class="p-title" style={{gridArea: pid + "t"}}>
+      <h2 class="title">{title ? title : "title"}</h2>
     </div>,
     <div class="p-content" style={{gridArea: pid + "c"}}>
-      <h2 class="title">{title ? title : "title"}</h2>
-      <h4 class="summary">{summary? summary : "summary"}</h4>
+      <div class="p-details">
+        <h3 class="year">{year ? year : "0000"}</h3>
+        {gh ? <a class="gh" href={gh}>GitHub</a> : ""}
+        {site ? <a class="site" href={site}>Website</a> : ""}
+      </div>
+      <h4 class="p-summary">{summary ? summary : "summary"}</h4>
     </div>
   ];
 }
@@ -27,11 +29,10 @@ function Code() {
 
         <h1 id="t1" style={{gridArea: "t1"}}>Code</h1>
         <h1 id="t2" style={{gridArea: "t2"}}>Projects</h1>
-        <h1 id="t3" style={{gridArea: "t3"}}>Resume</h1>
 
         <Project id="1"
                  title="Home Media Server"
-                 summary="Personal Docker-based Linux server with custom routing and forwarding."
+                 summary="Personal Docker-based Linux server with custom network routing and forwarding."
                  year="2026"/>
         
         <Project id="2"
@@ -48,10 +49,23 @@ function Code() {
                  site="https://typed-mauve.vercel.app/"/>
 
         <Project id="4"
-                 title="Playlist Title Generator"
+                 title="Playlist Title Maker"
                  summary="Script to generate content-aware Spotify playlist titles from AI analysis of song lyrics."
                  year="2022"
                  gh="https://github.com/ehuang1126/Playlist-Name-Generator"/>
+
+        <h1 id="t3" style={{gridArea: "t3"}}>Resume</h1>
+
+        <Project id="5"
+                 title="SDE Intern @AWS"
+                 summary="Designed and implemented scalable infrastructure upgrades for Amazon Timestream for InfluxDB."
+                 year="2024"
+                 site="https://aws.amazon.com/timestream/"/>
+
+        <Project id="6"
+                 title="Freelance Web Dev"
+                 summary="Designed custom landing page for processing home valuation requests for Angeleno Homes LLC."
+                 year="2023"/>
 
         {/* <p id="about" style={{gridArea: "about"}}>Placeholder text.</p> */}
       </div>
